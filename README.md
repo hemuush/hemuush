@@ -1,16 +1,22 @@
-## Hi there 👋
+# Hi there 👋, I'm [Your Name]
 
-<!--
-**hemuush/hemuush** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 🚀 About Me
+I'm a passionate backend developer from India 🇮🇳
 
-Here are some ideas to get you started:
+- 🔭 I’m currently working at KPMG as an Analyst
+- 🌱 I’m currently learning FastAPI and Azure DevOps
+- 👯 I’m looking to collaborate on open source Python projects
+- 🧠 I’m exploring AI integration with backend systems
+- 📫 How to reach me: your.email@example.com
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🛠️ Tech Stack
+![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
+![Django](https://img.shields.io/badge/-Django-092E20?style=flat&logo=django)
+![Azure](https://img.shields.io/badge/-Azure-0078D4?style=flat&logo=microsoft-azure)
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git)
+
+## 📈 GitHub Stats
+![YourName's GitHub stats](https://github-readme-stats.vercel.app/api?username=IcHiGo-KuRoSaKiI&show_icons=true&theme=tokyonight)
+
+## 📫 Connect With Me
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=linkedin)](https://linkedin.com/in/yourprofile)
