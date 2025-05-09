@@ -1,20 +1,21 @@
-<!-- Animated Header -->
+<!-- Dark-Themed Animated Header -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&section=header&text=Hi%20there%20👋&fontSize=40&fontColor=ffffff&desc=Backend%20Developer%20|%20AI%20Enthusiast%20|%20Cloud%20Explorer&descAlign=50&descAlignY=60&descSize=20&animation=fadeIn&color=0f0f0f" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&section=header&text=Hi%20there%20👋,%20I'm%20Hemant%20Sharma&fontSize=40&fontColor=ffffff&desc=Backend%20Developer%20|%20AI%20Enthusiast%20|%20Cloud%20Explorer&descAlign=50&descAlignY=60&descSize=20&animation=fadeIn&color=0e1111" />
 </p>
 
-<!-- Introduction -->
+<!-- 🚀 About Me -->
 <h2 align="center">🚀 About Me</h2>
-
-- 🔭 Currently working at **Walker Chandiok & Co LLP** as a **Senior Executive**
-- 🌱 Learning **FastAPI** and **Azure DevOps**
-- 👯 Looking to collaborate on **open-source Python projects**
-- 🧠 Exploring **AI integration** with backend systems
-- 📫 Reach me at: [hemant.shar.3004@gmail.com](mailto:hemant.shar.3004@gmail.com)
+<ul>
+  <li>🔭 Currently working at <strong>Walker Chandiok & Co LLP</strong> as a <strong>Senior Executive</strong></li>
+  <li>🌱 Learning <strong>FastAPI</strong> and <strong>Azure DevOps</strong></li>
+  <li>👯 Looking to collaborate on <strong>open-source Python projects</strong></li>
+  <li>🧠 Exploring <strong>AI integration</strong> with backend systems</li>
+  <li>📫 Reach me at: <a href="mailto:hemant.shar.3004@gmail.com">hemant.shar.3004@gmail.com</a></li>
+</ul>
 
 ---
 
-<!-- Tech Stack -->
+<!-- 🛠️ Tech Stack -->
 <h2 align="center">🛠️ Tech Stack</h2>
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -28,7 +29,7 @@
 
 ---
 
-<!-- GitHub Stats -->
+<!-- 📈 GitHub Stats -->
 <h2 align="center">📈 GitHub Stats</h2>
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=hemuush&show_icons=true&theme=tokyonight" />
@@ -37,18 +38,19 @@
 
 ---
 
-<!-- Featured Projects -->
+<!-- 📌 Featured Projects -->
 <h2 align="center">📌 Featured Projects</h2>
-
-- 🔐 **SecureDocs AI** – NLP-based document parser using OpenAI + Azure
-- 🧾 **TaxFlow** – Automation tool for generating tax reports via API
-- 🌐 **HR Portal API** – REST API for handling large-scale HR operations
+<ul>
+  <li><strong>🔐 SecureDocs AI</strong> – NLP-based document parser using OpenAI + Azure</li>
+  <li><strong>🧾 TaxFlow</strong> – Automation tool for generating tax reports via API</li>
+  <li><strong>🌐 HR Portal API</strong> – REST API for handling large-scale HR operations</li>
+</ul>
 
 *Feel free to check out these projects on my GitHub repositories.*
 
 ---
 
-<!-- Connect With Me -->
+<!-- 📫 Connect With Me -->
 <h2 align="center">📫 Connect With Me</h2>
 <p align="center">
   <a href="https://linkedin.com/in/hemuush">
@@ -61,7 +63,7 @@
 
 ---
 
-<!-- Fun Fact -->
+<!-- 🤖 Fun Fact -->
 <h2 align="center">🤖 Fun Fact</h2>
 <p align="center">
   I love turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding, you'll find me exploring the latest advancements in AI and cloud technologies.
