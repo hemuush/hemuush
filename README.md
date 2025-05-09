@@ -43,7 +43,7 @@ Here are some of the key technologies I work with:
 ---
 
 <div>
-<img src = "https://github.com/hemuush/hemuush/blob/main/sololeveling.gif" alt = "" align="center">
+<img src = "https://github.com/hemuush/hemuush/blob/main/arise.jpg" alt = "" align="center">
 </div>
 
 ---
