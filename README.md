@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="#">
-    <img src="https://readme-typing-svg.herokuapp.com?lines=Python%20Developer;AI%20Enthusiast;Cloud%20Explorer;Open%20Source%20Contributor&center=true&width=500&height=50&color=ffffff&vCenter=true&size=20&pause=1000&duration=2000" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?lines=Python%20Developer;AI%20Enthusiast;Cloud%20Explorer&center=true&width=500&height=50&color=ffffff&vCenter=true&size=20&pause=1000&duration=2000" alt="Typing SVG" />
   </a>
 </p>
 
