@@ -5,9 +5,8 @@
 ---
 
 ## 🚀 About Me
-I'm a **Python Developer** with 2.8 years of experience in backend development, API creation, and machine learning integration. I'm skilled in Agile methodologies, proficient with Django, FastAPI, and OpenAI, and experienced in deploying solutions in cloud (Azure) and on-premises environments.
+I'm a **Python Developer** with 3 years of experience in backend development, API creation, and machine learning integration. I'm skilled in Agile methodologies, proficient with Django, FastAPI, and OpenAI, and experienced in deploying solutions in cloud (Azure) and on-premises environments.
 
-- 🔭 Currently an **Analyst** at [KPMG India](https://kpmg.com/in/en/home.html).
 - 🌱 Exploring deeper into AI and advanced cloud technologies.
 - 📫 Reach out: <a href="mailto:hemant.shar.3004@gmail.com">hemant.shar.3004@gmail.com</a> | [LinkedIn](https://www.linkedin.com/in/hemuush/)
 
@@ -43,10 +42,8 @@ Here are some of the key technologies I work with:
 
 ---
 
-## ✨ Fun Animation
-
-<p align="center">
-  <img src="https://media.giphy.com/media/3o6ZtbT8X9rbnXodIc/giphy.gif" alt="AI Exploration GIF" width="300"/>
-</p>
+<div>
+<img src = "https://github.com/hemuush/hemuush/sololeveling.gif" alt = "" align="center">
+</div>
 
 ---
