@@ -34,11 +34,16 @@ Here are some of the key technologies I work with:
 
 ## 📈 GitHub Stats
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=hemuush&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&rank_icon=github" alt="Hemant's GitHub Stats" />
-  <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hemuush&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="Hemant's Top Languages" />
-</div>
+<table align="center">
+  <tr>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api?username=hemuush&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&rank_icon=github" alt="Hemant's GitHub Stats" />
+    </td>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hemuush&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="Hemant's Top Languages" />
+    </td>
+  </tr>
+</table>
 
 ---
 
