@@ -1,13 +1,13 @@
-# Hi there 👋, I'm [Your Name]
+# Hi there 👋, I'm Hemant Sharma
 
 ## 🚀 About Me
 I'm a passionate backend developer from India 🇮🇳
 
-- 🔭 I’m currently working at KPMG as an Analyst
+- 🔭 I’m currently working at Walker Chandiok as an Senior Executive
 - 🌱 I’m currently learning FastAPI and Azure DevOps
 - 👯 I’m looking to collaborate on open source Python projects
 - 🧠 I’m exploring AI integration with backend systems
-- 📫 How to reach me: your.email@example.com
+- 📫 How to reach me: hemant.shar.3004@gmail.com
 
 ## 🛠️ Tech Stack
 ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
@@ -16,7 +16,8 @@ I'm a passionate backend developer from India 🇮🇳
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git)
 
 ## 📈 GitHub Stats
-![YourName's GitHub stats](https://github-readme-stats.vercel.app/api?username=IcHiGo-KuRoSaKiI&show_icons=true&theme=tokyonight)
+![YourName's GitHub stats](https://github-readme-stats.vercel.app/api?username=hemuush&show_icons=true&theme=tokyonight)
 
 ## 📫 Connect With Me
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=linkedin)](https://linkedin.com/in/yourprofile)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=linkedin)](https://linkedin.com/in/hemuush)
+s
