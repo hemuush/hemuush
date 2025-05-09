@@ -1,6 +1,6 @@
 <!-- Animated Header -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Hi%20there%20👋,%20I'm%20Hemant%20Sharma&fontSize=40&fontAlignY=35&desc=Backend%20Developer%20|%20AI%20Enthusiast%20|%20Cloud%20Explorer&descAlignY=60&descAlign=50" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&section=header&text=Hi%20there%20👋&fontSize=40&fontColor=ffffff&desc=Backend%20Developer%20|%20AI%20Enthusiast%20|%20Cloud%20Explorer&descAlign=50&descAlignY=60&descSize=20&animation=fadeIn&color=0f0f0f" />
 </p>
 
 <!-- Introduction -->
