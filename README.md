@@ -1,5 +1,11 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=150&section=header&text=Hi%20there%20👋%20I'm%20Hemant&fontSize=40&fontColor=ffffff&desc=Python%20Developer%20|%20AI%20Enthusiast%20|%20Cloud%20Explorer&descAlign=50&descAlignY=70&descSize=18&animation=fadeIn&color=0f0f0f" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=150&section=header&text=Hi%20there%20👋%20I'm%20Hemant&fontSize=40&fontColor=ffffff&desc=&descAlign=50&descAlignY=70&descSize=18&animation=fadeIn&color=0f0f0f" />
+</p>
+
+<p align="center">
+  <a href="#">
+    <img src="https://readme-typing-svg.herokuapp.com?lines=Python%20Developer;AI%20Enthusiast;Cloud%20Explorer;Open%20Source%20Contributor&center=true&width=500&height=50&color=ffffff&vCenter=true&size=20&pause=1000&duration=2000" alt="Typing SVG" />
+  </a>
 </p>
 
 ---
