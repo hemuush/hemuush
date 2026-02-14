@@ -2,12 +2,14 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
-  workflow_dispatch:
+    - cron: "0 */6 * * *" # Runs every 6 hours
+  workflow_dispatch: # Allows you to run it manually
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # IMPORTANT: Allows the action to push to your repo
     steps:
       - uses: Platane/snk@v3
         with:
