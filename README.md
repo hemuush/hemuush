@@ -1,60 +1,226 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=150&section=header&text=Hi%20there%20👋%20I'm%20Hemant&fontSize=40&fontColor=ffffff&desc=&descAlign=50&descAlignY=70&descSize=18&animation=fadeIn&color=0f0f0f" />
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="#">
-    <img src="https://readme-typing-svg.herokuapp.com?lines=Python%20Developer;AI%20Enthusiast;Cloud%20Explorer&center=true&width=500&height=50&color=ffffff&vCenter=true&size=20&pause=1000&duration=2000" alt="Typing SVG" />
-  </a>
-</p>
+<!-- Dynamic Header with Wave Animation -->
+<img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&customColorList=6,11,20&text=Hemant%20Sharma&fontSize=50&fontAlignY=35&desc=Python%20Developer%20|%20AI%20Engineer%20|%20Cloud%20Architect&descSize=20&descAlignY=55&animation=twinkling" />
 
----
+<!-- Animated Typing Effect -->
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=3DFFEF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=Building+Intelligent+Solutions+%F0%9F%A4%96;Crafting+Scalable+APIs+%F0%9F%9A%80;Exploring+Cloud+%26+AI+%E2%98%81%EF%B8%8F" alt="Typing SVG" />
+</a>
 
-## 🚀 About Me
-I'm a **Python Developer** with 3 years of experience in backend development, API creation, and machine learning integration. I'm skilled in Agile methodologies, proficient with Django, FastAPI, and OpenAI, and experienced in deploying solutions in cloud (Azure) and on-premises environments.
+<!-- Profile Views Counter -->
+<img src="https://komarev.com/ghpvc/?username=hemuush&label=Profile%20Views&color=blueviolet&style=for-the-badge" alt="Profile Views" />
 
-- 🌱 Exploring deeper into AI and advanced cloud technologies.
-- 📫 Reach out: <a href="mailto:hemant.shar.3004@gmail.com">hemant.shar.3004@gmail.com</a> | [LinkedIn](https://www.linkedin.com/in/hemuush/)
-
----
-
-## 🛠️ Technologies & Tools I Use
-Here are some of the key technologies I work with:
-
-<p align="center">
-  <a href="https://www.python.org" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/></a>
-  <a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django"/></a>
-  <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/></a>
-  <a href="https://openai.com/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/></a>
-  <a href="https://azure.microsoft.com/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure"/></a>
-  <a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/></a>
-  <a href="https://numpy.org/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/></a>
-  <a href="https://scikit-learn.org/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/></a>
-  <a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/></a>
-  <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/></a>
-  <a href="https://azure.microsoft.com/en-us/products/devops/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Azure_DevOps-0078D4?style=for-the-badge&logo=azuredevops&logoColor=white" alt="Azure DevOps"/></a>
-  <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/></a>
-</p>
-
----
-
-## 📈 GitHub Stats
-
-<table align="center">
-  <tr>
-    <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=hemuush&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&rank_icon=github" alt="Hemant's GitHub Stats" />
-    </td>
-    <td>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hemuush&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" alt="Hemant's Top Languages" />
-    </td>
-  </tr>
-</table>
-
----
-
-<div>
-<img src = "https://github.com/hemuush/hemuush/blob/main/arise.jpg" alt = "" align="center">
 </div>
 
 ---
+
+## 🎯 About Me
+
+```python
+class PythonDeveloper:
+    def __init__(self):
+        self.name = "Hemant Sharma"
+        self.role = "Python Developer & AI Engineer"
+        self.experience = "3+ years"
+        self.location = "India 🇮🇳"
+        self.email = "hemant.shar.3004@gmail.com"
+        
+    def get_skills(self):
+        return {
+            "languages": ["Python", "SQL", "JavaScript"],
+            "frameworks": ["Django", "FastAPI", "Flask"],
+            "ai_ml": ["OpenAI", "PyTorch", "Scikit-learn", "Pandas"],
+            "cloud": ["Azure", "Azure DevOps"],
+            "databases": ["MySQL", "PostgreSQL", "MongoDB"],
+            "tools": ["Git", "Docker", "Postman", "VS Code"]
+        }
+    
+    def current_focus(self):
+        return [
+            "🤖 Advanced AI/ML implementations",
+            "☁️ Cloud-native architectures",
+            "🔧 Microservices & API design",
+            "📊 Data-driven solutions"
+        ]
+
+me = PythonDeveloper()
+```
+
+---
+
+## 🚀 Tech Stack
+
+<details open>
+<summary><b>💻 Programming & Frameworks</b></summary>
+<br>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+
+</details>
+
+<details open>
+<summary><b>🤖 AI & Machine Learning</b></summary>
+<br>
+
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+
+</details>
+
+<details open>
+<summary><b>☁️ Cloud & DevOps</b></summary>
+<br>
+
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![Azure DevOps](https://img.shields.io/badge/Azure_DevOps-0078D4?style=for-the-badge&logo=azuredevops&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+</details>
+
+<details open>
+<summary><b>🗄️ Databases</b></summary>
+<br>
+
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
+</details>
+
+---
+
+## 📊 GitHub Analytics
+
+<div align="center">
+  
+<!-- GitHub Stats Card -->
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=hemuush&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=3DFFEF&icon_color=3DFFEF&text_color=c9d1d9"/>
+
+<!-- GitHub Streak Stats -->
+<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=hemuush&theme=radical&hide_border=true&background=0d1117&ring=3DFFEF&fire=3DFFEF&currStreakLabel=3DFFEF"/>
+
+</div>
+
+<div align="center">
+
+<!-- Most Used Languages -->
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hemuush&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=3DFFEF&text_color=c9d1d9&langs_count=8"/>
+
+<!-- GitHub Activity Graph -->
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=hemuush&theme=react-dark&hide_border=true&area=true&bg_color=0d1117&color=3DFFEF&line=3DFFEF&point=ffffff" />
+
+</div>
+
+---
+
+## 🏆 GitHub Trophies
+
+<div align="center">
+  
+[![trophy](https://github-profile-trophy.vercel.app/?username=hemuush&theme=radical&no-frame=true&no-bg=true&margin-w=4&row=1&column=7)](https://github.com/ryo-ma/github-profile-trophy)
+
+</div>
+
+---
+
+## 💼 Professional Experience Highlights
+
+```yaml
+expertise:
+  backend_development:
+    - RESTful API design and implementation
+    - Microservices architecture
+    - Database optimization and design
+    
+  ai_integration:
+    - OpenAI GPT integration
+    - Machine learning model deployment
+    - Natural language processing solutions
+    
+  cloud_deployment:
+    - Azure cloud infrastructure
+    - CI/CD pipeline automation
+    - DevOps best practices
+    
+  methodologies:
+    - Agile/Scrum frameworks
+    - Test-driven development
+    - Code review and mentoring
+```
+
+---
+
+## 🎨 Featured Projects
+
+<!-- You can add your actual projects here -->
+<div align="center">
+
+| 🚀 Project | 📝 Description | 🛠️ Tech Stack |
+|------------|----------------|----------------|
+| **AI Chatbot** | Intelligent conversational AI with OpenAI integration | Python, FastAPI, OpenAI |
+| **Cloud API Gateway** | Scalable API management solution | Django, Azure, Docker |
+| **ML Pipeline** | End-to-end ML workflow automation | PyTorch, Pandas, Scikit-learn |
+
+</div>
+
+---
+
+## 🌐 Connect With Me
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hemuush/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hemant.shar.3004@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hemuush)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](#)
+
+</div>
+
+---
+
+## 📈 Contribution Graph
+
+<div align="center">
+
+![Snake animation](https://raw.githubusercontent.com/hemuush/hemuush/output/github-contribution-grid-snake-dark.svg)
+
+</div>
+
+---
+
+## 💡 Random Dev Quote
+
+<div align="center">
+
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+</div>
+
+---
+
+## 📝 Latest Blog Posts
+<!-- BLOG-POST-LIST:START -->
+<!-- You can integrate your blog feed here using GitHub Actions -->
+<!-- BLOG-POST-LIST:END -->
+
+---
+
+<div align="center">
+
+### 💭 *"Code is like humor. When you have to explain it, it's bad."* – Cory House
+
+---
+
+### ⭐ Show some love by starring some repositories!
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&customColorList=6,11,20&section=footer" />
+
+</div>
