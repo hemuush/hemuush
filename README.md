@@ -8,13 +8,23 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=hemuush&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4" alt="hemuush" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=hemuush&label=Profile%20Views&color=0e75b6&style=flat" alt="hemuush" />
+</p>
+
 ---
 
-## 🚀 About Me
+## 🧐 About Me
 I'm a **Python Developer** with 3 years of experience in backend development, API creation, and machine learning integration. I'm skilled in Agile methodologies, proficient with Django, FastAPI, and OpenAI, and experienced in deploying solutions in cloud (Azure) and on-premises environments.
 
-- 🌱 Exploring deeper into AI and advanced cloud technologies.
-- 📫 Reach out: <a href="mailto:hemant.shar.3004@gmail.com">hemant.shar.3004@gmail.com</a> | [LinkedIn](https://www.linkedin.com/in/hemuush/)
+- 🔭 Exploring deeper into AI and advanced cloud technologies.
+- 📬 Reach out: <a href="mailto:hemant.shar.3004@gmail.com">hemant.shar.3004@gmail.com</a> | [LinkedIn](https://www.linkedin.com/in/hemuush/)
 
 ---
 
@@ -50,6 +60,24 @@ Here are some of the key technologies I work with:
     </td>
   </tr>
 </table>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=hemuush&theme=tokyonight&hide_border=true" alt="Hemant's Streak" />
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hemuush/hemuush/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hemuush/hemuush/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/hemuush/hemuush/output/github-contribution-grid-snake.svg">
+  </picture>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://readme-jokes.vercel.app/api?theme=tokyonight" alt="Jokes Card" />
+</p>
 
 ---
 
