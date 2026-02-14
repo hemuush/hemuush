@@ -5,11 +5,11 @@
 
 <!-- Animated Typing Effect -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=3DFFEF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=Building+Intelligent+Solutions+%F0%9F%A4%96;Crafting+Scalable+APIs+%F0%9F%9A%80;Exploring+Cloud+%26+AI+%E2%98%81%EF%B8%8F" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=Building+Intelligent+Solutions+%F0%9F%A4%96;Crafting+Scalable+APIs+%F0%9F%9A%80;Exploring+Cloud+%26+AI+%E2%98%81%EF%B8%8F" alt="Typing SVG" />
 </a>
 
 <!-- Profile Views Counter -->
-<img src="https://komarev.com/ghpvc/?username=hemuush&label=Profile%20Views&color=blueviolet&style=for-the-badge" alt="Profile Views" />
+<img src="https://komarev.com/ghpvc/?username=hemuush&label=Profile%20Views&color=0e75b6&style=for-the-badge" alt="Profile Views" />
 
 </div>
 
@@ -102,20 +102,20 @@ me = PythonDeveloper()
 <div align="center">
   
 <!-- GitHub Stats Card -->
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=hemuush&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=3DFFEF&icon_color=3DFFEF&text_color=c9d1d9"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=hemuush&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9"/>
 
 <!-- GitHub Streak Stats -->
-<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=hemuush&theme=radical&hide_border=true&background=0d1117&ring=3DFFEF&fire=3DFFEF&currStreakLabel=3DFFEF"/>
+<img height="180em" src="https://github-readme-streak-stats-eight.vercel.app?user=hemuush&theme=tokyonight&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff"/>
 
 </div>
 
 <div align="center">
 
 <!-- Most Used Languages -->
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hemuush&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=3DFFEF&text_color=c9d1d9&langs_count=8"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hemuush&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&langs_count=8"/>
 
 <!-- GitHub Activity Graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=hemuush&theme=react-dark&hide_border=true&area=true&bg_color=0d1117&color=3DFFEF&line=3DFFEF&point=ffffff" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=hemuush&theme=tokyo-night&hide_border=true&area=true&bg_color=0d1117&color=58a6ff&line=58a6ff&point=ffffff" />
 
 </div>
 
@@ -125,7 +125,7 @@ me = PythonDeveloper()
 
 <div align="center">
   
-[![trophy](https://github-profile-trophy.vercel.app/?username=hemuush&theme=radical&no-frame=true&no-bg=true&margin-w=4&row=1&column=7)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=hemuush&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&row=1&column=7)](https://github.com/ryo-ma/github-profile-trophy)
 
 </div>
 
@@ -160,7 +160,6 @@ expertise:
 
 ## 🎨 Featured Projects
 
-<!-- You can add your actual projects here -->
 <div align="center">
 
 | 🚀 Project | 📝 Description | 🛠️ Tech Stack |
@@ -190,7 +189,8 @@ expertise:
 
 <div align="center">
 
-![Snake animation](https://raw.githubusercontent.com/hemuush/hemuush/output/github-contribution-grid-snake-dark.svg)
+<!-- Snake Animation - Uncomment after setting up GitHub Actions -->
+<!-- ![Snake animation](https://raw.githubusercontent.com/hemuush/hemuush/output/github-contribution-grid-snake-dark.svg) -->
 
 </div>
 
@@ -200,7 +200,7 @@ expertise:
 
 <div align="center">
 
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
 </div>
 
@@ -219,7 +219,7 @@ expertise:
 
 ---
 
-### ⭐ Show some love by starring some repositories!
+### Show some ❤️ by starring some repositories!
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=gradient&customColorList=6,11,20&section=footer" />
 
