@@ -6,6 +6,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hemuush/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:hemant.shar.3004@gmail.com)
+![Profile Views](https://komarev.com/ghpvc/?username=hemuush&color=0e75b6&style=flat)
 
 </div>
 
@@ -54,9 +55,9 @@ developer = {
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=hemuush&show_icons=true&theme=dark&hide_border=true&count_private=true)
+![GitHub Stats](https://github-readme-stats-fast.vercel.app/api?username=hemuush&show_icons=true&theme=dark&hide_border=true&count_private=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=hemuush&layout=compact&theme=dark&hide_border=true)
+![Top Languages](https://github-readme-stats-fast.vercel.app/api/top-langs/?username=hemuush&layout=compact&theme=dark&hide_border=true)
 
 </div>
 
