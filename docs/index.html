@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-t="ds">
+<html lang="en" data-t="tide">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,249 +11,272 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
 <style>
 @property --ac{syntax:'<color>';inherits:true;initial-value:#3fa7c9}
-:root{--bg:#090b0b;--bg2:#0f1213;--tx:#ece9e1;--mut:#8d918f;--line:#1d2224;--ac:#3fa7c9;--ease:cubic-bezier(.22,.8,.2,1);transition:--ac .7s var(--ease)}
-[data-t=ds]{--ac:#3fa7c9}[data-t=op]{--ac:#e5484d}[data-t=nr]{--ac:#f28c28}[data-t=jk]{--ac:#8b7cf6}[data-t=aot]{--ac:#6fb27c}[data-t=db]{--ac:#f5c518}
+:root{--bg:#08090a;--bg2:#0e1012;--bg3:#13161a;--tx:#ecebe6;--mut:#8a8f93;--line:#1c2024;--ac:#3fa7c9;--ease:cubic-bezier(.22,.8,.2,1);transition:--ac .8s var(--ease)}
+[data-t=tide]{--ac:#3fa7c9}[data-t=crimson]{--ac:#e5484d}[data-t=ember]{--ac:#f28c28}[data-t=violet]{--ac:#8b7cf6}[data-t=jade]{--ac:#5fb27e}[data-t=gold]{--ac:#e9b931}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{font:16px/1.7 Inter,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(900px 520px at 78% -8%,color-mix(in srgb,var(--ac) 14%,transparent),transparent 70%),radial-gradient(700px 420px at 4% 105%,color-mix(in srgb,var(--ac) 8%,transparent),transparent 70%)}
+body{font:16px/1.65 Inter,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(800px 500px at 85% -10%,color-mix(in srgb,var(--ac) 13%,transparent),transparent 70%)}
 a{color:inherit;text-decoration:none}
 pattern{color:var(--ac)}
 ::selection{background:var(--ac);color:#000}
 .jp{font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif}
 .mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
-.wrap{max-width:1000px;margin:0 auto;padding:0 28px}
-#fx{position:fixed;inset:0;z-index:0;pointer-events:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 main,header,footer{position:relative;z-index:1}
-.bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--ac);z-index:60;box-shadow:0 0 12px var(--ac)}
-header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.2px}
-.logo i{font:700 17px "Noto Serif JP",serif;font-style:normal;color:var(--ac);border:1px solid var(--ac);border-radius:7px;width:30px;height:30px;display:grid;place-items:center;transition:background .3s,color .3s}
-.logo:hover i{background:var(--ac);color:#000}
-nav{display:flex;gap:26px;font-size:14px}
+.bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--ac);z-index:60}
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:600;letter-spacing:-.2px}
+.logo i{font:700 13px Inter,sans-serif;font-style:normal;color:var(--bg);background:var(--ac);border-radius:8px;width:30px;height:30px;display:grid;place-items:center;transition:background .8s}
+nav{display:flex;gap:28px;font-size:14px}
 nav a{color:var(--mut);transition:color .2s;position:relative}
 nav a:after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--ac);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
 nav a:hover,nav a.on{color:var(--tx)}nav a:hover:after,nav a.on:after{transform:scaleX(1)}
-.hero{padding:112px 28px 84px;position:relative}
-.kanji{position:absolute;right:-6px;top:20px;font:700 clamp(220px,32vw,400px)/1 "Noto Serif JP",serif;color:var(--ac);opacity:.075;user-select:none;pointer-events:none;transition:opacity .5s,transform .8s var(--ease)}
-.kanji.sw{opacity:0;transform:translateY(24px) scale(.96)}
-.slash{position:absolute;right:0;top:40px;width:min(34vw,340px);height:auto;pointer-events:none}
-.slash path{stroke:var(--ac);stroke-width:2;fill:none;stroke-linecap:round;stroke-dasharray:700;stroke-dashoffset:700;filter:drop-shadow(0 0 8px var(--ac))}
-.slash.go path{animation:cut 1.3s cubic-bezier(.7,0,.2,1) forwards}.slash.go path+path{animation-delay:.12s}
-@keyframes cut{to{stroke-dashoffset:0}}
-.status{display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--mut);padding:6px 13px 6px 11px;border:1px solid var(--line);border-radius:99px;background:color-mix(in srgb,var(--bg2) 70%,transparent)}
-.status i{width:7px;height:7px;border-radius:50%;background:var(--ac);box-shadow:0 0 10px var(--ac);animation:pulse 2.4s infinite}
-@keyframes pulse{50%{opacity:.35}}
-h1{font:700 clamp(44px,8vw,86px)/1.02 "Noto Serif JP",serif;letter-spacing:-2px;margin:24px 0 12px}
-h1 span{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
-h1 span b{display:inline-block;font-weight:700;transform:translateY(110%);animation:up 1s var(--ease) .1s forwards}
-h1 span:nth-child(2) b{animation-delay:.22s}
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:96px 0 72px}
+.status{display:inline-flex;align-items:center;gap:9px;font-size:13px;color:var(--mut);padding:6px 14px 6px 11px;border:1px solid var(--line);border-radius:99px;background:var(--bg2)}
+.status i{width:7px;height:7px;border-radius:50%;background:#3ccf8e;box-shadow:0 0 0 0 rgba(60,207,142,.6);animation:ping 2.2s infinite}
+@keyframes ping{80%,100%{box-shadow:0 0 0 8px transparent}}
+h1{font:600 clamp(46px,7.4vw,84px)/1 Inter,sans-serif;letter-spacing:-3.2px;margin:26px 0 18px}
+h1 span{display:block;overflow:hidden;padding-bottom:.06em}
+h1 b{display:inline-block;font-weight:600;transform:translateY(110%);animation:up 1s var(--ease) .1s forwards}
+h1 span+span b{animation-delay:.2s;color:var(--mut)}
 @keyframes up{to{transform:none}}
-.role{font-size:clamp(17px,2.2vw,21px);color:var(--ac);min-height:1.6em}
+.role{font:500 clamp(15px,1.8vw,18px) "JetBrains Mono",monospace;color:var(--ac);min-height:1.6em}
 .caret{display:inline-block;width:2px;height:1em;background:var(--ac);margin-left:3px;vertical-align:-2px;animation:bl 1s steps(1) infinite}
 @keyframes bl{50%{opacity:0}}
-.lead{max-width:540px;margin:22px 0 34px;color:var(--mut)}
+.lead{max-width:520px;margin:18px 0 32px;color:var(--mut);font-size:17px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:13px 24px;border:1px solid var(--line);border-radius:12px;font-size:15px;transition:border-color .3s,box-shadow .3s,background .3s,transform .25s var(--ease);background:var(--bg2);display:inline-block;will-change:transform}
-.btn:hover{border-color:var(--ac);box-shadow:0 12px 34px -14px var(--ac)}
-.btn.p{background:var(--ac);color:#06100f;border-color:var(--ac);font-weight:600;transition:background .7s,border-color .7s,box-shadow .3s,transform .25s var(--ease)}
-.band{display:block;width:100%;height:64px;color:var(--ac);opacity:.55;transition:opacity .4s}
-.band.sw{opacity:0}
-section{padding:96px 0 10px}
-.sh{display:flex;align-items:baseline;gap:16px;margin-bottom:36px}
-.sh .k{font:700 34px "Noto Serif JP",serif;color:var(--ac);line-height:1}
-.sh h2{font:700 clamp(26px,3.6vw,38px)/1.15 "Noto Serif JP",serif;letter-spacing:-.5px}
-.sh .sub{font:500 12px "JetBrains Mono",monospace;color:var(--mut);letter-spacing:1.5px;text-transform:uppercase;margin-left:auto}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{--mx:50%;--my:50%;position:relative;border:1px solid var(--line);background:var(--bg2);border-radius:16px;padding:24px;transition:border-color .35s,transform .45s var(--ease),box-shadow .35s;overflow:hidden}
-.card:before{content:"";position:absolute;inset:0;background:radial-gradient(320px circle at var(--mx) var(--my),color-mix(in srgb,var(--ac) 18%,transparent),transparent 65%);opacity:0;transition:opacity .35s}
-.card:hover{border-color:color-mix(in srgb,var(--ac) 55%,var(--line));transform:translateY(-4px);box-shadow:0 18px 40px -22px var(--ac)}
-.card:hover:before{opacity:1}
-.card>*{position:relative}
-.card .num{font:700 28px "Noto Serif JP",serif;color:var(--ac);margin-bottom:10px;line-height:1}
-.card h3{font-size:17px;font-weight:600;margin-bottom:6px}
-.card p{color:var(--mut);font-size:14.5px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
-.stats .card{display:flex;gap:16px;align-items:center}
-.stats .n{font:700 46px/1 "Noto Serif JP",serif;letter-spacing:-1px}
-.stats small{color:var(--mut);font-size:13px;line-height:1.4}
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-.tab{background:none;border:1px solid var(--line);color:var(--mut);padding:7px 15px;border-radius:99px;cursor:pointer;font:500 13.5px Inter,sans-serif;transition:.25s}
+.btn{color:inherit;font-family:inherit;cursor:pointer;padding:12px 22px;border:1px solid var(--line);border-radius:12px;font-size:15px;font-weight:500;transition:border-color .3s,background .8s,transform .3s var(--ease);background:var(--bg2);display:inline-flex;gap:8px;align-items:center}
+.btn:hover{border-color:var(--ac);transform:translateY(-2px)}
+.btn.p{background:var(--ac);color:#071012;border-color:transparent;font-weight:600}
+.btn.p:hover{transform:translateY(-2px)}
+.enso{position:relative;aspect-ratio:1;max-width:360px;width:100%;justify-self:end}
+.enso svg{width:100%;height:100%;overflow:visible}
+.enso .ring{fill:none;stroke:var(--ac);stroke-width:8;stroke-linecap:round;stroke-dasharray:1000;stroke-dashoffset:1000;opacity:.9}
+.enso.go .ring{animation:ink 1.8s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes ink{to{stroke-dashoffset:120}}
+.enso .ring2{fill:none;stroke:var(--ac);stroke-width:1;opacity:.25;stroke-dasharray:2 8;transform-origin:center;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.enso .kj{position:absolute;inset:0;display:grid;place-items:center;font:700 clamp(90px,12vw,140px)/1 "Noto Serif JP",serif;color:var(--tx);transition:opacity .4s,transform .7s var(--ease)}
+.enso .kj.sw{opacity:0;transform:scale(.9)}
+.enso small{position:absolute;bottom:4%;left:50%;transform:translateX(-50%);font:500 11px "JetBrains Mono",monospace;letter-spacing:2.5px;color:var(--mut);text-transform:uppercase;white-space:nowrap}
+.band{display:block;width:100%;height:56px;opacity:.5;transition:opacity .4s}.band.sw{opacity:0}
+/* sections */
+section{padding:88px 0 8px}
+.sh{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:30px}
+.sh h2{font:600 clamp(28px,3.6vw,40px)/1.1 Inter,sans-serif;letter-spacing:-1.2px}
+.sh .ix{font:500 12px "JetBrains Mono",monospace;color:var(--mut);letter-spacing:1.5px}
+.sh .ix b{color:var(--ac);font-weight:500}
+.tile{--mx:50%;--my:50%;position:relative;border:1px solid var(--line);background:var(--bg2);border-radius:18px;padding:26px;overflow:hidden;transition:border-color .35s,transform .5s var(--ease)}
+.tile:before{content:"";position:absolute;inset:0;background:radial-gradient(340px circle at var(--mx) var(--my),color-mix(in srgb,var(--ac) 14%,transparent),transparent 65%);opacity:0;transition:opacity .35s;pointer-events:none}
+.tile:hover{border-color:color-mix(in srgb,var(--ac) 45%,var(--line))}
+.tile:hover:before{opacity:1}
+.tile>*{position:relative}
+.lbl{font:500 11px "JetBrains Mono",monospace;letter-spacing:1.8px;text-transform:uppercase;color:var(--mut);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.lbl:before{content:"";width:6px;height:6px;border-radius:2px;background:var(--ac)}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(150px,auto);gap:14px}
+.b-intro{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between}
+.b-intro p{font-size:clamp(19px,2.1vw,24px);line-height:1.45;letter-spacing:-.4px}
+.b-intro p em{font-style:normal;color:var(--ac)}
+.b-intro .sig{color:var(--mut);font-size:14px;margin-top:24px}
+.stat .n{font:600 52px/1 Inter,sans-serif;letter-spacing:-2.5px}
+.stat .n i{font-style:normal;color:var(--ac)}
+.stat p{color:var(--mut);font-size:13.5px;margin-top:8px;line-height:1.4}
+.b-now{grid-column:span 2}
+.b-now b{font-weight:600;font-size:18px;display:block}.b-now span{color:var(--mut);font-size:14.5px}
+.b-loc .clock{font:500 30px "JetBrains Mono",monospace;letter-spacing:-1px}
+.b-loc span{color:var(--mut);font-size:13.5px}
+.b-stack{grid-column:span 4;padding:22px 0}
+.b-stack .lbl{padding:0 26px}
+.mq{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq div{display:flex;gap:12px;width:max-content;animation:mq 45s linear infinite}
+.mq:hover div{animation-play-state:paused}
+.mq span{border:1px solid var(--line);border-radius:10px;padding:7px 14px;font-size:14px;white-space:nowrap;background:var(--bg3)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.focus{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:14px}
+.focus .tile{padding:22px}
+.focus .ix{font:500 12px "JetBrains Mono",monospace;color:var(--ac);margin-bottom:26px;display:block}
+.focus h3{font-size:16px;font-weight:600;margin-bottom:6px}.focus p{color:var(--mut);font-size:13.5px;line-height:1.5}
+/* skills */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tab{background:none;border:1px solid var(--line);color:var(--mut);padding:7px 15px;border-radius:99px;cursor:pointer;font:500 13.5px Inter,sans-serif;transition:color .2s,border-color .2s,background .8s}
 .tab:hover{color:var(--tx);border-color:var(--mut)}
-.tab.on{color:#06100f;background:var(--ac);border-color:var(--ac);transition:background .7s,border-color .7s,color .25s}
+.tab.on{color:#071012;background:var(--ac);border-color:transparent}
 .chips{display:flex;flex-wrap:wrap;gap:9px}
-.chip{border:1px solid var(--line);background:var(--bg2);border-radius:9px;padding:6px 14px;font-size:14px;transition:.25s var(--ease);animation:pop .5s var(--ease) both}
-@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.96)}}
-.chip:hover{border-color:var(--ac);color:var(--ac);transform:translateY(-3px)}
+.chip{border:1px solid var(--line);background:var(--bg2);border-radius:10px;padding:7px 15px;font-size:14px;transition:border-color .25s,color .25s,transform .3s var(--ease);animation:pop .5s var(--ease) both}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}}
+.chip:hover{border-color:var(--ac);color:var(--ac);transform:translateY(-2px)}
 .chip.hide{display:none}
-.tl{position:relative;padding-left:34px}
-.tl:before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:1px;background:linear-gradient(var(--ac),var(--line))}
-.tl .it{position:relative;margin-bottom:16px}
-.tl .it:before{content:"";position:absolute;left:-34px;top:30px;width:15px;height:15px;transform:rotate(45deg);background:var(--bg);border:2px solid var(--ac)}
-.tl .d{font:12px "JetBrains Mono",monospace;color:var(--mut);margin-bottom:4px}
-.tl h3{font-size:19px;font-weight:600}.tl .co{color:var(--ac)}
-.shelf{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.an{--c:var(--ac);text-align:left;font:inherit;color:inherit;cursor:pointer;border:1px solid var(--line);background:var(--bg2);border-radius:16px;padding:22px;position:relative;overflow:hidden;transition:border-color .35s,transform .45s var(--ease),box-shadow .35s}
-.an .kj{position:absolute;right:10px;bottom:-26px;font:700 112px/1 "Noto Serif JP",serif;color:var(--c);opacity:.12;transition:opacity .4s,transform .6s var(--ease)}
-.an:hover{border-color:var(--c);transform:translateY(-4px);box-shadow:0 18px 40px -22px var(--c)}
-.an:hover .kj{opacity:.28;transform:translateY(-8px) rotate(-4deg)}
-.an.on{border-color:var(--c);box-shadow:inset 0 0 0 1px var(--c)}
-.an b{display:block;font-weight:600;margin-bottom:2px}.an span{display:block;color:var(--mut);font-size:13.5px;position:relative}
-.an em{font:500 11px "JetBrains Mono",monospace;font-style:normal;color:var(--c);letter-spacing:1.2px;text-transform:uppercase;display:block;margin-bottom:12px;position:relative}
-.edu{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.edu b{display:block;font-weight:600;margin-bottom:3px}.edu span{color:var(--mut);font-size:14px}
-.cta{border:1px solid var(--line);border-radius:20px;padding:60px 32px;text-align:center;background:var(--bg2);position:relative;overflow:hidden}
-.cta .k2{position:absolute;inset:0;display:grid;place-items:center;font:700 260px "Noto Serif JP",serif;color:var(--ac);opacity:.05;pointer-events:none}
-.cta>*{position:relative}.cta p{color:var(--mut);margin:12px auto 26px;max-width:460px}.cta .sh{justify-content:center;margin-bottom:0}
-.big{font:500 clamp(17px,3.4vw,28px) "JetBrains Mono",monospace;color:var(--ac);border-bottom:1px solid var(--ac);padding-bottom:3px;word-break:break-all;transition:color .25s,border-color .25s}
-.big:hover{color:var(--tx);border-color:var(--tx)}
-footer{padding:50px 0 120px;color:var(--mut);font-size:13px;text-align:center}
+/* experience */
+.xp{display:grid;gap:14px}
+.xp .tile{display:grid;grid-template-columns:200px 1fr auto;gap:24px;align-items:center}
+.xp .d{font:13px "JetBrains Mono",monospace;color:var(--mut)}
+.xp h3{font-size:19px;font-weight:600;letter-spacing:-.3px}.xp .co{color:var(--mut);font-size:15px}
+.xp .tag{font:500 11px "JetBrains Mono",monospace;letter-spacing:1.2px;text-transform:uppercase;padding:5px 10px;border-radius:7px;border:1px solid var(--line);color:var(--mut)}
+.xp .tag.now{color:var(--ac);border-color:color-mix(in srgb,var(--ac) 40%,transparent)}
+/* education */
+.edu{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.edu b{display:block;font-weight:600;margin-bottom:4px}.edu span{color:var(--mut);font-size:14px}
+/* contact */
+.cta{text-align:center;padding:72px 28px}
+.cta h2{font:600 clamp(32px,5.4vw,58px)/1.05 Inter,sans-serif;letter-spacing:-2px;margin:6px 0 16px}
+.cta h2 em{font-style:normal;color:var(--ac)}
+.cta p{color:var(--mut);margin:0 auto 30px;max-width:440px}
+.cta .btns{justify-content:center}
+.btn.copy{font-family:"JetBrains Mono",monospace;font-size:14px;color:var(--tx)}
+footer{padding:44px 0 120px;color:var(--mut);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid var(--line);padding-top:26px}
 /* dock */
-.dock{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:40;display:flex;gap:6px;padding:7px;border:1px solid var(--line);border-radius:18px;background:color-mix(in srgb,var(--bg) 74%,transparent);backdrop-filter:blur(16px);box-shadow:0 20px 50px -20px #000}
-.dock button{position:relative;width:44px;height:44px;border-radius:12px;border:0;background:transparent;color:var(--mut);font:700 20px "Noto Serif JP",serif;cursor:pointer;transition:transform .35s var(--ease),background .25s,color .25s}
-.dock button:hover{transform:translateY(-6px) scale(1.12);color:var(--c)}
+.dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:40;display:flex;gap:4px;padding:6px;border:1px solid var(--line);border-radius:16px;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(16px);box-shadow:0 20px 50px -20px #000}
+.dock button{position:relative;width:42px;height:42px;border-radius:11px;border:0;background:transparent;color:var(--mut);font:700 18px "Noto Serif JP",serif;cursor:pointer;transition:transform .35s var(--ease),background .25s,color .25s}
+.dock button:hover{transform:translateY(-5px);color:var(--c)}
 .dock button.on{background:color-mix(in srgb,var(--c) 18%,transparent);color:var(--c)}
-.dock button:after{content:attr(data-n);position:absolute;bottom:58px;left:50%;transform:translate(-50%,6px);white-space:nowrap;font:500 12px Inter,sans-serif;background:var(--bg2);color:var(--tx);border:1px solid var(--line);padding:4px 10px;border-radius:8px;opacity:0;pointer-events:none;transition:.25s var(--ease)}
+.dock button:after{content:attr(data-n);position:absolute;bottom:54px;left:50%;transform:translate(-50%,6px);white-space:nowrap;font:500 12px Inter,sans-serif;background:var(--bg3);color:var(--tx);border:1px solid var(--line);padding:4px 10px;border-radius:8px;opacity:0;pointer-events:none;transition:.25s var(--ease)}
 .dock button:hover:after{opacity:1;transform:translate(-50%,0)}
-.rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease) calc(var(--i,0)*70ms),transform .8s var(--ease) calc(var(--i,0)*70ms)}.rv.in{opacity:1;transform:none}
+.toast{position:fixed;left:50%;bottom:84px;transform:translate(-50%,10px);background:var(--bg3);border:1px solid var(--line);padding:8px 14px;border-radius:10px;font-size:13px;opacity:0;transition:.3s var(--ease);z-index:50;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .8s var(--ease) calc(var(--i,0)*60ms),transform .8s var(--ease) calc(var(--i,0)*60ms)}.rv.in{opacity:1;transform:none}
 :focus-visible{outline:2px solid var(--ac);outline-offset:3px;border-radius:6px}
-@media(max-width:860px){.cards,.stats,.shelf{grid-template-columns:1fr 1fr}.edu{grid-template-columns:1fr 1fr}.slash{opacity:.5}}
-@media(max-width:620px){nav a{display:none}.cards,.stats,.shelf,.edu{grid-template-columns:1fr}.hero{padding-top:70px;padding-bottom:64px}.sh .sub{display:none}.dock button{width:40px;height:40px}.dock button:after{display:none}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.slash path{stroke-dashoffset:0}h1 span b{transform:none}html{scroll-behavior:auto}}
+@media(max-width:940px){.bento{grid-template-columns:1fr 1fr}.b-stack{grid-column:span 2}.focus{grid-template-columns:1fr 1fr}.edu{grid-template-columns:1fr 1fr}.xp .tile{grid-template-columns:1fr auto}.xp .d{grid-column:1/-1}}
+@media(max-width:700px){nav a{display:none}.hero{grid-template-columns:1fr;padding-top:64px}.enso{max-width:150px;justify-self:start;order:-1}.enso small{display:none}.enso .kj{font-size:64px}.bento,.focus,.edu{grid-template-columns:1fr}.b-intro,.b-now,.b-stack{grid-column:auto;grid-row:auto}.dock button{width:38px;height:38px}.dock button:after{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}h1 b{transform:none}.enso .ring{stroke-dashoffset:120}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<canvas id="fx" aria-hidden="true"></canvas>
 <div class="bar" id="bar"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-  <pattern id="p-ds" width="40" height="20" patternUnits="userSpaceOnUse"><g fill="#090b0b" stroke="currentColor" stroke-width="1" stroke-opacity=".6"><g id="w"><circle cx="20" cy="-10" r="20"/><circle cx="20" cy="-10" r="14" fill="none"/><circle cx="20" cy="-10" r="8" fill="none"/></g><use href="#w" x="-20" y="10"/><use href="#w" x="20" y="10"/><use href="#w" x="0" y="20"/><use href="#w" x="-20" y="30"/><use href="#w" x="20" y="30"/></g></pattern>
-  <pattern id="p-op" width="40" height="16" patternUnits="userSpaceOnUse"><path d="M0 8Q10 0 20 8T40 8" fill="none" stroke="currentColor" stroke-opacity=".6"/><path d="M0 14Q10 6 20 14T40 14" fill="none" stroke="currentColor" stroke-opacity=".3"/></pattern>
-  <pattern id="p-nr" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M22 22a2 2 0 0 1 4 0a4 4 0 0 1-8 0a6 6 0 0 1 12 0a8 8 0 0 1-16 0a10 10 0 0 1 20 0" fill="none" stroke="currentColor" stroke-opacity=".55"/></pattern>
-  <pattern id="p-jk" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M0 22L22 0M-11 11L11-11M11 33L33 11" stroke="currentColor" stroke-opacity=".4" fill="none"/><rect x="9" y="9" width="4" height="4" fill="currentColor" fill-opacity=".5"/></pattern>
-  <pattern id="p-aot" width="40" height="20" patternUnits="userSpaceOnUse"><path d="M0 0H40M0 10H40M20 0V10M0 10V20M40 10V20" fill="none" stroke="currentColor" stroke-opacity=".5"/></pattern>
-  <pattern id="p-db" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20 9L22 18L31 20L22 22L20 31L18 22L9 20L18 18Z" fill="currentColor" fill-opacity=".45"/><circle cx="2" cy="2" r="1" fill="currentColor" fill-opacity=".4"/><circle cx="38" cy="38" r="1" fill="currentColor" fill-opacity=".4"/></pattern>
+  <pattern id="p-tide" width="40" height="20" patternUnits="userSpaceOnUse"><g fill="#08090a" stroke="currentColor" stroke-width="1" stroke-opacity=".6"><g id="w"><circle cx="20" cy="-10" r="20"/><circle cx="20" cy="-10" r="14" fill="none"/><circle cx="20" cy="-10" r="8" fill="none"/></g><use href="#w" x="-20" y="10"/><use href="#w" x="20" y="10"/><use href="#w" x="0" y="20"/><use href="#w" x="-20" y="30"/><use href="#w" x="20" y="30"/></g></pattern>
+  <pattern id="p-crimson" width="40" height="16" patternUnits="userSpaceOnUse"><path d="M0 8Q10 0 20 8T40 8" fill="none" stroke="currentColor" stroke-opacity=".6"/><path d="M0 14Q10 6 20 14T40 14" fill="none" stroke="currentColor" stroke-opacity=".3"/></pattern>
+  <pattern id="p-ember" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M22 22a2 2 0 0 1 4 0a4 4 0 0 1-8 0a6 6 0 0 1 12 0a8 8 0 0 1-16 0a10 10 0 0 1 20 0" fill="none" stroke="currentColor" stroke-opacity=".55"/></pattern>
+  <pattern id="p-violet" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M0 22L22 0M-11 11L11-11M11 33L33 11" stroke="currentColor" stroke-opacity=".4" fill="none"/><rect x="9" y="9" width="4" height="4" fill="currentColor" fill-opacity=".5"/></pattern>
+  <pattern id="p-jade" width="40" height="20" patternUnits="userSpaceOnUse"><path d="M0 0H40M0 10H40M20 0V10M0 10V20M40 10V20" fill="none" stroke="currentColor" stroke-opacity=".5"/></pattern>
+  <pattern id="p-gold" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20 9L22 18L31 20L22 22L20 31L18 22L9 20L18 18Z" fill="currentColor" fill-opacity=".45"/><circle cx="2" cy="2" r="1" fill="currentColor" fill-opacity=".4"/><circle cx="38" cy="38" r="1" fill="currentColor" fill-opacity=".4"/></pattern>
 </defs></svg>
 
 <header class="top"><div class="wrap">
-  <a class="logo" href="#top"><i id="logoK">滅</i>Hemant Sharma</a>
-  <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Missions</a><a href="#anime">Anime</a><a href="#education">Training</a><a href="#contact">Contact</a></nav>
+  <a class="logo" href="#top"><i>HS</i>Hemant Sharma</a>
+  <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
 </div></header>
 
 <main id="top">
-<div class="wrap hero">
-  <div class="kanji" id="kanji" aria-hidden="true">滅</div>
-  <svg class="slash go" id="slash" viewBox="0 0 440 440" aria-hidden="true"><path d="M20 410 C150 300 290 150 420 20"/><path d="M60 420 C180 320 300 190 430 70" stroke-opacity=".35"/></svg>
-  <span class="status"><i></i> Open to collaborations</span>
-  <h1 class="jp"><span><b>Hemant</b></span> <span><b>Sharma</b></span></h1>
-  <div class="role mono"><span id="typed"></span><span class="caret"></span></div>
-  <p class="lead">I build production GenAI systems on Azure: RAG pipelines, multi-agent workflows and MCP-based integrations, backed by 4+ years of backend engineering. Based in Noida, India.</p>
-  <div class="btns">
-    <a class="btn p mag" href="mailto:hemant.shrma.3004@gmail.com">Send a message</a>
-    <a class="btn mag" href="https://www.linkedin.com/in/hemuush/" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn mag" href="https://github.com/hemuush" target="_blank" rel="noopener">GitHub</a>
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <span class="status"><i></i> Open to collaborations</span>
+      <h1><span><b>Hemant</b></span><span><b>Sharma</b></span></h1>
+      <div class="role"><span id="typed"></span><span class="caret"></span></div>
+      <p class="lead">I build production GenAI systems on Azure: RAG pipelines, multi-agent workflows and MCP-based integrations, backed by 4+ years of backend engineering.</p>
+      <div class="btns">
+        <a class="btn p" href="#contact">Get in touch</a>
+        <a class="btn" href="https://www.linkedin.com/in/hemuush/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="https://github.com/hemuush" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="enso go" id="enso" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><circle class="ring2" cx="100" cy="100" r="96"/><path class="ring" d="M150 42 A72 72 0 1 0 168 118"/></svg>
+      <div class="kj" id="kj">水</div>
+      <small id="tname">Tide</small>
+    </div>
   </div>
 </div>
-<svg class="band" id="band" aria-hidden="true"><rect width="100%" height="100%" fill="url(#p-ds)"/></svg>
+<svg class="band" aria-hidden="true"><rect width="100%" height="100%" fill="url(#p-tide)"/></svg>
 
 <div class="wrap">
-<section id="about" class="rv">
-  <div class="sh"><span class="k">壱</span><h2>Forms of work</h2><span class="sub">About</span></div>
-  <div class="cards">
-    <div class="card rv" style="--i:0"><div class="num">壱</div><h3>Agentic AI</h3><p>Multi-agent orchestration with LangChain and LangGraph, with tools exposed through MCP servers.</p></div>
-    <div class="card rv" style="--i:1"><div class="num">弐</div><h3>RAG</h3><p>Semantic chunking and embedding search on Azure AI Search and ChromaDB.</p></div>
-    <div class="card rv" style="--i:2"><div class="num">参</div><h3>Cloud on Azure</h3><p>Azure AI Foundry, Container Apps, CI/CD, monitoring and cost optimisation.</p></div>
-    <div class="card rv" style="--i:3"><div class="num">肆</div><h3>Backend</h3><p>Python APIs with FastAPI and Django, data pipelines and automation.</p></div>
-    <div class="card rv" style="--i:4"><div class="num">伍</div><h3>Data &amp; Storage</h3><p>CosmosDB, Redis, MongoDB, MySQL and MS SQL, plus Azure Document Intelligence.</p></div>
-    <div class="card rv" style="--i:5"><div class="num">陸</div><h3>Quality</h3><p>LLM output evaluation, prompt engineering and pytest.</p></div>
+<section id="about">
+  <div class="sh rv"><h2>About</h2><span class="ix"><b>01</b> / 05</span></div>
+  <div class="bento">
+    <div class="tile b-intro rv">
+      <div><div class="lbl">Profile</div>
+      <p>GenAI and Agentic AI engineer with <em>4+ years in backend engineering</em>, the last ~2 building <em>production GenAI systems on Azure</em>: RAG pipelines, multi-agent workflows and MCP-based integrations.</p></div>
+      <div class="sig">Python · FastAPI · LangGraph · Azure AI Foundry</div>
+    </div>
+    <div class="tile stat rv" style="--i:1"><div class="lbl">Backend</div><div class="n" data-to="4" data-suf="+">0</div><p>years in backend engineering</p></div>
+    <div class="tile stat rv" style="--i:2"><div class="lbl">GenAI</div><div class="n" data-to="2" data-suf="+">0</div><p>years building production GenAI</p></div>
+    <div class="tile stat rv" style="--i:3"><div class="lbl">Cost</div><div class="n" data-to="70" data-suf="%">0</div><p>speech-model hosting cost reduced</p></div>
+    <div class="tile b-loc rv" style="--i:4"><div class="lbl">Noida, India</div><div class="clock" id="clock">--:--</div><span>local time (IST)</span></div>
+    <div class="tile b-now rv" style="--i:2"><div class="lbl">Currently</div><b>Senior Executive</b><span>Walker Chandiok &amp; Co LLP (Grant Thornton India), building GenAI systems on Azure</span></div>
+    <div class="tile b-now rv" style="--i:3"><div class="lbl">Open to</div><b>Collaborations</b><span>GenAI, agents and backend systems</span></div>
+    <div class="tile b-stack rv"><div class="lbl">Stack</div><div class="mq"><div id="mq"></div></div></div>
   </div>
-  <div class="stats">
-    <div class="card rv"><div class="n" data-to="4" data-suf="+">0</div><small>years in backend<br>engineering</small></div>
-    <div class="card rv" style="--i:1"><div class="n" data-to="2" data-suf="+">0</div><small>years building<br>production GenAI</small></div>
-    <div class="card rv" style="--i:2"><div class="n" data-to="70" data-suf="%">0</div><small>speech-model hosting<br>cost reduced</small></div>
+  <div class="focus">
+    <div class="tile rv"><span class="ix">01</span><h3>Agentic AI</h3><p>Multi-agent orchestration with LangChain and LangGraph, tools via MCP servers.</p></div>
+    <div class="tile rv" style="--i:1"><span class="ix">02</span><h3>RAG</h3><p>Semantic chunking and embedding search on Azure AI Search and ChromaDB.</p></div>
+    <div class="tile rv" style="--i:2"><span class="ix">03</span><h3>Cloud</h3><p>Azure AI Foundry, Container Apps, CI/CD, monitoring, cost optimisation.</p></div>
+    <div class="tile rv" style="--i:3"><span class="ix">04</span><h3>Backend</h3><p>Python APIs with FastAPI and Django, data pipelines, automation.</p></div>
+    <div class="tile rv" style="--i:4"><span class="ix">05</span><h3>Quality</h3><p>LLM output evaluation, prompt engineering and pytest.</p></div>
   </div>
 </section>
 
-<section id="skills" class="rv">
-  <div class="sh"><span class="k">技</span><h2>Techniques</h2><span class="sub">Skills</span></div>
-  <div class="tabs" id="tabs"></div>
+<section id="skills">
+  <div class="sh rv"><h2>Skills</h2><span class="ix"><b>02</b> / 05</span></div>
+  <div class="tabs rv" id="tabs"></div>
   <div class="chips" id="chips"></div>
 </section>
 
-<section id="experience" class="rv">
-  <div class="sh"><span class="k">任</span><h2>Missions</h2><span class="sub">Experience</span></div>
-  <div class="tl">
-    <div class="it card"><div class="d">Dec 2024 – Present · Noida</div><h3>Senior Executive</h3><div class="co">Walker Chandiok &amp; Co LLP (Grant Thornton India)</div></div>
-    <div class="it card"><div class="d">Jan 2022 – Nov 2024 · Noida</div><h3>Analyst</h3><div class="co">KPMG India</div></div>
+<section id="experience">
+  <div class="sh rv"><h2>Experience</h2><span class="ix"><b>03</b> / 05</span></div>
+  <div class="xp">
+    <div class="tile rv"><span class="d">Dec 2024 – Present</span><div><h3>Senior Executive</h3><div class="co">Walker Chandiok &amp; Co LLP (Grant Thornton India) · Noida</div></div><span class="tag now">Current</span></div>
+    <div class="tile rv" style="--i:1"><span class="d">Jan 2022 – Nov 2024</span><div><h3>Analyst</h3><div class="co">KPMG India · Noida</div></div><span class="tag">2y 11m</span></div>
   </div>
 </section>
 
-<section id="anime" class="rv">
-  <div class="sh"><span class="k">漫</span><h2>The anime shelf</h2><span class="sub">Pick a world</span></div>
-  <div class="shelf" id="shelf"></div>
-</section>
-
-<section id="education" class="rv">
-  <div class="sh"><span class="k">修</span><h2>Training</h2><span class="sub">Education</span></div>
+<section id="education">
+  <div class="sh rv"><h2>Education</h2><span class="ix"><b>04</b> / 05</span></div>
   <div class="edu">
-    <div class="card"><b>B.Tech, Computer Science</b><span>Punjabi University</span></div>
-    <div class="card"><b>Machine Learning</b><span>Stanford (Coursera)</span></div>
-    <div class="card"><b>Python for Everybody</b><span>Coursera</span></div>
-    <div class="card"><b>5-star Python</b><span>HackerRank</span></div>
+    <div class="tile rv"><div class="lbl">Degree</div><b>B.Tech, Computer Science</b><span>Punjabi University</span></div>
+    <div class="tile rv" style="--i:1"><div class="lbl">Course</div><b>Machine Learning</b><span>Stanford (Coursera)</span></div>
+    <div class="tile rv" style="--i:2"><div class="lbl">Course</div><b>Python for Everybody</b><span>Coursera</span></div>
+    <div class="tile rv" style="--i:3"><div class="lbl">Badge</div><b>5-star Python</b><span>HackerRank</span></div>
   </div>
 </section>
 
-<section id="contact" class="rv">
-  <div class="cta">
-    <div class="k2" id="k2" aria-hidden="true">滅</div>
-    <div class="sh"><span class="k">文</span><h2>Send a message</h2></div>
+<section id="contact">
+  <div class="tile cta rv">
+    <span class="ix mono" style="font-size:12px;color:var(--mut);letter-spacing:1.5px"><b style="color:var(--ac);font-weight:500">05</b> / 05</span>
+    <h2>Let's build something <em>together</em>.</h2>
     <p>Open to collaborations on GenAI, agents and backend systems.</p>
-    <a class="big" href="mailto:hemant.shrma.3004@gmail.com">hemant.shrma.3004@gmail.com</a>
+    <div class="btns">
+      <a class="btn p" href="mailto:hemant.shrma.3004@gmail.com">Email me</a>
+      <button class="btn copy" id="copy" type="button">hemant.shrma.3004@gmail.com ⧉</button>
+    </div>
   </div>
 </section>
 </div>
 </main>
-<svg class="band" id="band2" style="transform:scaleY(-1);opacity:.35;margin-top:70px" aria-hidden="true"><rect width="100%" height="100%" fill="url(#p-ds)"/></svg>
-<footer><div class="wrap">© <span id="yr"></span> Hemant Sharma · Noida, India · <span class="mono" id="tn">Demon Slayer</span></div></footer>
-
-<nav class="dock" id="dock" aria-label="Choose an anime theme"></nav>
+<footer><div class="wrap"><span>© <span id="yr"></span> Hemant Sharma</span><span>Noida, India</span></div></footer>
+<nav class="dock" id="dock" aria-label="Colour theme"></nav>
+<div class="toast" id="toast">Email copied</div>
 
 <script>
-const $=s=>document.querySelector(s),root=document.documentElement;
+const $=s=>document.querySelector(s),root=document.documentElement,RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 $('#yr').textContent=new Date().getFullYear();
-const T=[
- {id:'ds',n:'Demon Slayer',k:'滅',c:'#3fa7c9',tag:'Water · Total Concentration',d:'Haori checks, seigaiha waves and a cold blue blade.'},
- {id:'op',n:'One Piece',k:'海',c:'#e5484d',tag:'Grand Line · Adventure',d:'Open sea, rolling waves and a straw-hat red.'},
- {id:'nr',n:'Naruto',k:'忍',c:'#f28c28',tag:'Hidden Leaf · Ninja',d:'Chakra spirals and a sunset orange.'},
- {id:'jk',n:'Jujutsu Kaisen',k:'呪',c:'#8b7cf6',tag:'Cursed Energy · Domain',d:'Slashing hatch lines and violet cursed energy.'},
- {id:'aot',n:'Attack on Titan',k:'翼',c:'#6fb27c',tag:'Walls · Wings of Freedom',d:'Stone walls and a survey-corps green.'},
- {id:'db',n:'Dragon Ball',k:'気',c:'#f5c518',tag:'Ki · Super Saiyan',d:'Ki sparks and a golden aura.'}];
-const cvs=$('#fx'),cx=cvs.getContext('2d');let R=[],last=0;
-const fit=()=>{cvs.width=innerWidth;cvs.height=innerHeight};fit();addEventListener('resize',fit);
-// dock + shelf
-const dock=$('#dock'),shelf=$('#shelf');
-T.forEach(t=>{const b=document.createElement('button');b.dataset.t=t.id;b.dataset.n=t.n;b.style.setProperty('--c',t.c);b.textContent=t.k;b.setAttribute('aria-label',t.n);b.onclick=()=>setT(t.id,true);dock.append(b);
- const a=document.createElement('button');a.className='an rv';a.dataset.t=t.id;a.style.setProperty('--c',t.c);a.style.setProperty('--i',T.indexOf(t)%3);
- a.innerHTML=`<em>${t.tag}</em><b>${t.n}</b><span>${t.d}</span><div class="kj" aria-hidden="true">${t.k}</div>`;a.onclick=()=>{setT(t.id,true);scrollTo({top:0,behavior:'smooth'})};shelf.append(a)});
+const T=[{id:'tide',n:'Tide',k:'水',c:'#3fa7c9'},{id:'crimson',n:'Crimson',k:'紅',c:'#e5484d'},{id:'ember',n:'Ember',k:'炎',c:'#f28c28'},
+ {id:'violet',n:'Violet',k:'紫',c:'#8b7cf6'},{id:'jade',n:'Jade',k:'翠',c:'#5fb27e'},{id:'gold',n:'Gold',k:'金',c:'#e9b931'}];
+const dock=$('#dock');
+T.forEach(t=>{const b=document.createElement('button');b.dataset.t=t.id;b.dataset.n=t.n;b.style.setProperty('--c',t.c);b.textContent=t.k;b.setAttribute('aria-label',t.n+' theme');b.onclick=()=>setT(t.id,true);dock.append(b)});
 function setT(id,anim){const t=T.find(x=>x.id===id)||T[0];
- const swap=()=>{root.dataset.t=t.id;['#kanji','#logoK','#k2'].forEach(s=>$(s).textContent=t.k);$('#tn').textContent=t.n;
-  document.querySelectorAll('.band').forEach(b=>b.firstElementChild.setAttribute('fill',`url(#p-${t.id})`));
-  document.querySelectorAll('.dock button,.an').forEach(x=>x.classList.toggle('on',x.dataset.t===t.id));
-  ['#kanji','.band'].forEach(s=>document.querySelectorAll(s).forEach(e=>e.classList.remove('sw')));
-  const sl=$('#slash');sl.classList.remove('go');void sl.getBoundingClientRect();sl.classList.add('go');
-  document.title='Hemant Sharma · GenAI & Agentic AI Engineer'};
- try{localStorage.setItem('t',t.id)}catch(e){}
- if(anim&&!matchMedia('(prefers-reduced-motion:reduce)').matches){document.querySelectorAll('#kanji,.band').forEach(e=>e.classList.add('sw'));
-  const c=getComputedStyle(root).getPropertyValue('--ac');R.push({x:innerWidth/2,y:innerHeight-40,r:4,a:.9,big:1});setTimeout(swap,260)}else swap()}
-let st='ds';try{st=localStorage.getItem('t')||'ds'}catch(e){}
-setT(st,false);
+ const swap=()=>{root.dataset.t=t.id;$('#kj').textContent=t.k;$('#tname').textContent=t.n;
+  document.querySelectorAll('.band rect').forEach(r=>r.setAttribute('fill',`url(#p-${t.id})`));
+  document.querySelectorAll('.dock button').forEach(x=>x.classList.toggle('on',x.dataset.t===t.id));
+  document.querySelectorAll('#kj,.band').forEach(e=>e.classList.remove('sw'));
+  const e=$('#enso');e.classList.remove('go');void e.getBoundingClientRect();e.classList.add('go')};
+ try{localStorage.setItem('theme',t.id)}catch(e){}
+ if(anim&&!RM){document.querySelectorAll('#kj,.band').forEach(e=>e.classList.add('sw'));setTimeout(swap,240)}else swap()}
+let st='tide';try{st=localStorage.getItem('theme')||'tide'}catch(e){}
+setT(T.some(t=>t.id===st)?st:'tide',false);
 // typing
 const words=['GenAI & Agentic AI Engineer','RAG pipeline builder','Multi-agent workflow designer','MCP integrations on Azure'];
 let wi=0,ci=0,del=false;const el=$('#typed');
 (function tick(){const w=words[wi];el.textContent=w.slice(0,ci);
- if(!del&&ci===w.length){del=true;return setTimeout(tick,1500)}
+ if(!del&&ci===w.length){del=true;return setTimeout(tick,1600)}
  if(del&&ci===0){del=false;wi=(wi+1)%words.length}
- ci+=del?-1:1;setTimeout(tick,del?26:58)})();
+ ci+=del?-1:1;setTimeout(tick,del?24:55)})();
+// clock
+const clk=()=>$('#clock').textContent=new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'});clk();setInterval(clk,15000);
 // skills
 const skills={
  'GenAI & Agentic AI':['LangChain','LangGraph','MCP (Model Context Protocol)','RAG','Semantic Chunking','Embedding Search','Prompt Engineering','LLM Output Evaluation','Multi-Agent Orchestration'],
@@ -265,26 +288,23 @@ const skills={
 const tabs=$('#tabs'),chips=$('#chips');
 ['All',...Object.keys(skills)].forEach((c,i)=>{const b=document.createElement('button');b.className='tab'+(i?'':' on');b.textContent=c;b.onclick=()=>{
  tabs.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));let n=0;
- chips.querySelectorAll('.chip').forEach(x=>{const h=c!=='All'&&x.dataset.c!==c;x.classList.toggle('hide',h);if(!h){x.style.animation='none';x.offsetWidth;x.style.animation='';x.style.animationDelay=(n++*22)+'ms'}})};tabs.append(b)});
+ chips.querySelectorAll('.chip').forEach(x=>{const h=c!=='All'&&x.dataset.c!==c;x.classList.toggle('hide',h);if(!h){x.style.animation='none';x.offsetWidth;x.style.animation='';x.style.animationDelay=(n++*20)+'ms'}})};tabs.append(b)});
 Object.entries(skills).forEach(([c,l])=>l.forEach(s=>{const d=document.createElement('span');d.className='chip';d.dataset.c=c;d.textContent=s;chips.append(d)}));
+const stack=['Python','FastAPI','LangGraph','LangChain','MCP','Azure AI Foundry','Azure OpenAI','ChromaDB','Azure AI Search','CosmosDB','Docker','Redis','Django','PyTorch','Playwright','pytest'];
+$('#mq').innerHTML=[...stack,...stack].map(s=>`<span>${s}</span>`).join('');
 // reveal + counters
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
  e.target.querySelectorAll('.n').forEach(n=>{const to=+n.dataset.to,s0=performance.now();
- (function f(t){const p=Math.min((t-s0)/1200,1);n.textContent=Math.round(to*(1-Math.pow(1-p,3)))+n.dataset.suf;if(p<1)requestAnimationFrame(f)})(s0)})}),{threshold:.1});
+ (function f(t){const p=Math.min((t-s0)/1200,1);n.innerHTML=Math.round(to*(1-Math.pow(1-p,3)))+'<i>'+n.dataset.suf+'</i>';if(p<1)requestAnimationFrame(f)})(s0)})}),{threshold:.1});
 document.querySelectorAll('.rv').forEach(x=>io.observe(x));
-// spotlight + magnetic
-document.addEventListener('pointermove',e=>{const c=e.target.closest&&e.target.closest('.card');if(c){const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')}});
-document.querySelectorAll('.mag').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.28}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')});
+// spotlight
+document.addEventListener('pointermove',e=>{const c=e.target.closest&&e.target.closest('.tile');if(c){const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')}});
+// copy email
+$('#copy').onclick=async()=>{try{await navigator.clipboard.writeText('hemant.shrma.3004@gmail.com');const t=$('#toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600)}catch(e){location.href='mailto:hemant.shrma.3004@gmail.com'}};
 // progress + active nav
 const bar=$('#bar'),secs=[...document.querySelectorAll('section')],ls=[...document.querySelectorAll('header nav a')];
-addEventListener('scroll',()=>{const h=root;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+addEventListener('scroll',()=>{bar.style.width=(root.scrollTop/(root.scrollHeight-root.clientHeight)*100)+'%';
  const y=scrollY+160,cur=secs.filter(s=>s.offsetTop<=y).pop();ls.forEach(a=>a.classList.toggle('on',!!cur&&a.getAttribute('href')==='#'+cur.id))},{passive:true});
-// ripples
-if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
- addEventListener('pointerdown',e=>{R.push({x:e.clientX,y:e.clientY,r:2,a:.5},{x:e.clientX,y:e.clientY,r:2,a:.3})});
- addEventListener('pointermove',e=>{const t=performance.now();if(t-last>150){last=t;R.push({x:e.clientX,y:e.clientY,r:2,a:.13})}});
- (function loop(){cx.clearRect(0,0,cvs.width,cvs.height);const c=getComputedStyle(root).getPropertyValue('--ac').trim();cx.strokeStyle=c;
-  R=R.filter(o=>o.a>.01);R.forEach(o=>{o.r+=o.big?5:1.7;o.a*=o.big?.96:.955;cx.lineWidth=o.big?2:1;cx.globalAlpha=o.a;cx.beginPath();cx.arc(o.x,o.y,o.r,0,7);cx.stroke()});requestAnimationFrame(loop)})()}
 </script>
 </body>
 </html>

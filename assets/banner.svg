@@ -14,51 +14,51 @@
   <g clip-path="url(#c)">
     <rect width="900" height="220" fill="#090B0B"/>
     <g class="L" style="animation-delay:0s">
-  <rect width="900" height="8" fill="url(#ck)"/>
-  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#3FA7C9" opacity=".08">滅</text>
+  <rect width="900" height="3" fill="#3FA7C9" opacity=".8"/>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#3FA7C9" opacity=".08">水</text>
   <rect y="170" width="900" height="50" fill="url(#p-ds)" opacity=".6"/>
   <g class="m" font-size="17" fill="#3FA7C9"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
-  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#3FA7C9" opacity=".9">DEMON SLAYER</text>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#3FA7C9" opacity=".9">TIDE</text>
   <path class="cut" style="animation-delay:0s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#3FA7C9" stroke-width="2" stroke-linecap="round"/>
 </g>
 <g class="L" style="animation-delay:6s">
   <rect width="900" height="3" fill="#E5484D" opacity=".8"/>
-  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#E5484D" opacity=".08">海</text>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#E5484D" opacity=".08">紅</text>
   <rect y="170" width="900" height="50" fill="url(#p-op)" opacity=".6"/>
   <g class="m" font-size="17" fill="#E5484D"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
-  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#E5484D" opacity=".9">ONE PIECE</text>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#E5484D" opacity=".9">CRIMSON</text>
   <path class="cut" style="animation-delay:6s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#E5484D" stroke-width="2" stroke-linecap="round"/>
 </g>
 <g class="L" style="animation-delay:12s">
   <rect width="900" height="3" fill="#F28C28" opacity=".8"/>
-  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#F28C28" opacity=".08">忍</text>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#F28C28" opacity=".08">炎</text>
   <rect y="170" width="900" height="50" fill="url(#p-nr)" opacity=".6"/>
   <g class="m" font-size="17" fill="#F28C28"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
-  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#F28C28" opacity=".9">NARUTO</text>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#F28C28" opacity=".9">EMBER</text>
   <path class="cut" style="animation-delay:12s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#F28C28" stroke-width="2" stroke-linecap="round"/>
 </g>
 <g class="L" style="animation-delay:18s">
   <rect width="900" height="3" fill="#8B7CF6" opacity=".8"/>
-  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#8B7CF6" opacity=".08">呪</text>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#8B7CF6" opacity=".08">紫</text>
   <rect y="170" width="900" height="50" fill="url(#p-jk)" opacity=".6"/>
   <g class="m" font-size="17" fill="#8B7CF6"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
-  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#8B7CF6" opacity=".9">JUJUTSU KAISEN</text>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#8B7CF6" opacity=".9">VIOLET</text>
   <path class="cut" style="animation-delay:18s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#8B7CF6" stroke-width="2" stroke-linecap="round"/>
 </g>
 <g class="L" style="animation-delay:24s">
   <rect width="900" height="3" fill="#6FB27C" opacity=".8"/>
-  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#6FB27C" opacity=".08">翼</text>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#6FB27C" opacity=".08">翠</text>
   <rect y="170" width="900" height="50" fill="url(#p-aot)" opacity=".6"/>
   <g class="m" font-size="17" fill="#6FB27C"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
-  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#6FB27C" opacity=".9">ATTACK ON TITAN</text>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#6FB27C" opacity=".9">JADE</text>
   <path class="cut" style="animation-delay:24s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#6FB27C" stroke-width="2" stroke-linecap="round"/>
 </g>
 <g class="L" style="animation-delay:30s">
   <rect width="900" height="3" fill="#F5C518" opacity=".8"/>
-  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#F5C518" opacity=".08">気</text>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#F5C518" opacity=".08">金</text>
   <rect y="170" width="900" height="50" fill="url(#p-db)" opacity=".6"/>
   <g class="m" font-size="17" fill="#F5C518"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
-  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#F5C518" opacity=".9">DRAGON BALL</text>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#F5C518" opacity=".9">GOLD</text>
   <path class="cut" style="animation-delay:30s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#F5C518" stroke-width="2" stroke-linecap="round"/>
 </g>
 
