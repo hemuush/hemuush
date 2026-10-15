@@ -1,37 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220" role="img" aria-label="Hemant Sharma, GenAI and Agentic AI Engineer">
-  <defs>
-    <pattern id="ck" width="16" height="16" patternUnits="userSpaceOnUse">
-      <rect width="16" height="16" fill="#0A0A0A"/><rect width="8" height="8" fill="#1F6F55"/><rect x="8" y="8" width="8" height="8" fill="#1F6F55"/>
-    </pattern>
-    <pattern id="sg" width="40" height="20" patternUnits="userSpaceOnUse">
-      <g fill="#090B0B" stroke="#3FA7C9" stroke-width="1" stroke-opacity=".5">
-        <g id="w"><circle cx="20" cy="-10" r="20"/><circle cx="20" cy="-10" r="14" fill="none"/><circle cx="20" cy="-10" r="8" fill="none"/></g>
-        <use href="#w" x="-20" y="10"/><use href="#w" x="20" y="10"/><use href="#w" x="0" y="20"/><use href="#w" x="-20" y="30"/><use href="#w" x="20" y="30"/>
-      </g>
-    </pattern>
-    <clipPath id="c"><rect width="900" height="220" rx="12"/></clipPath>
+  <defs><pattern id="p-ds" width="40" height="20" patternUnits="userSpaceOnUse"><g fill="#090B0B" stroke="#3FA7C9" stroke-width="1" stroke-opacity=".6"><g id="w"><circle cx="20" cy="-10" r="20"/><circle cx="20" cy="-10" r="14" fill="none"/><circle cx="20" cy="-10" r="8" fill="none"/></g><use href="#w" x="-20" y="10"/><use href="#w" x="20" y="10"/><use href="#w" x="0" y="20"/><use href="#w" x="-20" y="30"/><use href="#w" x="20" y="30"/></g></pattern><pattern id="p-op" width="40" height="16" patternUnits="userSpaceOnUse"><path d="M0 8Q10 0 20 8T40 8" fill="none" stroke="#E5484D" stroke-opacity=".6"/><path d="M0 14Q10 6 20 14T40 14" fill="none" stroke="#E5484D" stroke-opacity=".3"/></pattern><pattern id="p-nr" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M22 22a2 2 0 0 1 4 0a4 4 0 0 1-8 0a6 6 0 0 1 12 0a8 8 0 0 1-16 0a10 10 0 0 1 20 0" fill="none" stroke="#F28C28" stroke-opacity=".55"/></pattern><pattern id="p-jk" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M0 22L22 0M-11 11L11-11M11 33L33 11" stroke="#8B7CF6" stroke-opacity=".4" fill="none"/><rect x="9" y="9" width="4" height="4" fill="#8B7CF6" fill-opacity=".5"/></pattern><pattern id="p-aot" width="40" height="20" patternUnits="userSpaceOnUse"><path d="M0 0H40M0 10H40M20 0V10M0 10V20M40 10V20" fill="none" stroke="#6FB27C" stroke-opacity=".5"/></pattern><pattern id="p-db" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20 9L22 18L31 20L22 22L20 31L18 22L9 20L18 18Z" fill="#F5C518" fill-opacity=".45"/><circle cx="2" cy="2" r="1" fill="#F5C518" fill-opacity=".4"/><circle cx="38" cy="38" r="1" fill="#F5C518" fill-opacity=".4"/></pattern><pattern id="ck" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#0A0A0A"/><rect width="8" height="8" fill="#1F6F55"/><rect x="8" y="8" width="8" height="8" fill="#1F6F55"/></pattern><clipPath id="c"><rect width="900" height="220" rx="12"/></clipPath>
     <style>
       .t{font-family:'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho',Georgia,serif}
       .m{font-family:'SF Mono',Menlo,Consolas,monospace}
-      .role{opacity:0;animation:cycle 12s infinite}.r2{animation-delay:3s}.r3{animation-delay:6s}.r4{animation-delay:9s}
+      .L{opacity:0;animation:lay 36s linear infinite}
+      @keyframes lay{0%{opacity:0}3%,15%{opacity:1}18.7%,100%{opacity:0}}
+      .role{opacity:0;animation:cycle 12s infinite}
       @keyframes cycle{0%{opacity:0}4%,22%{opacity:1}27%,100%{opacity:0}}
-      .cut{stroke-dasharray:500;stroke-dashoffset:500;animation:cut 6s ease-in-out infinite}
-      @keyframes cut{0%{stroke-dashoffset:500;opacity:1}25%,80%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+      .cut{stroke-dasharray:500;stroke-dashoffset:500;animation:cut 36s linear infinite}
+      @keyframes cut{0%{stroke-dashoffset:500}6%,15%{stroke-dashoffset:0}18.7%,100%{stroke-dashoffset:0}}
     </style>
   </defs>
   <g clip-path="url(#c)">
     <rect width="900" height="220" fill="#090B0B"/>
-    <rect width="900" height="8" fill="url(#ck)"/>
-    <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#3FA7C9" opacity=".07">滅</text>
-    <rect y="170" width="900" height="50" fill="url(#sg)" opacity=".55"/>
+    <g class="L" style="animation-delay:0s">
+  <rect width="900" height="8" fill="url(#ck)"/>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#3FA7C9" opacity=".08">滅</text>
+  <rect y="170" width="900" height="50" fill="url(#p-ds)" opacity=".6"/>
+  <g class="m" font-size="17" fill="#3FA7C9"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#3FA7C9" opacity=".9">DEMON SLAYER</text>
+  <path class="cut" style="animation-delay:0s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#3FA7C9" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g class="L" style="animation-delay:6s">
+  <rect width="900" height="3" fill="#E5484D" opacity=".8"/>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#E5484D" opacity=".08">海</text>
+  <rect y="170" width="900" height="50" fill="url(#p-op)" opacity=".6"/>
+  <g class="m" font-size="17" fill="#E5484D"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#E5484D" opacity=".9">ONE PIECE</text>
+  <path class="cut" style="animation-delay:6s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#E5484D" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g class="L" style="animation-delay:12s">
+  <rect width="900" height="3" fill="#F28C28" opacity=".8"/>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#F28C28" opacity=".08">忍</text>
+  <rect y="170" width="900" height="50" fill="url(#p-nr)" opacity=".6"/>
+  <g class="m" font-size="17" fill="#F28C28"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#F28C28" opacity=".9">NARUTO</text>
+  <path class="cut" style="animation-delay:12s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#F28C28" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g class="L" style="animation-delay:18s">
+  <rect width="900" height="3" fill="#8B7CF6" opacity=".8"/>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#8B7CF6" opacity=".08">呪</text>
+  <rect y="170" width="900" height="50" fill="url(#p-jk)" opacity=".6"/>
+  <g class="m" font-size="17" fill="#8B7CF6"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#8B7CF6" opacity=".9">JUJUTSU KAISEN</text>
+  <path class="cut" style="animation-delay:18s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#8B7CF6" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g class="L" style="animation-delay:24s">
+  <rect width="900" height="3" fill="#6FB27C" opacity=".8"/>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#6FB27C" opacity=".08">翼</text>
+  <rect y="170" width="900" height="50" fill="url(#p-aot)" opacity=".6"/>
+  <g class="m" font-size="17" fill="#6FB27C"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#6FB27C" opacity=".9">ATTACK ON TITAN</text>
+  <path class="cut" style="animation-delay:24s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#6FB27C" stroke-width="2" stroke-linecap="round"/>
+</g>
+<g class="L" style="animation-delay:30s">
+  <rect width="900" height="3" fill="#F5C518" opacity=".8"/>
+  <text class="t" x="880" y="215" text-anchor="end" font-size="250" font-weight="700" fill="#F5C518" opacity=".08">気</text>
+  <rect y="170" width="900" height="50" fill="url(#p-db)" opacity=".6"/>
+  <g class="m" font-size="17" fill="#F5C518"><text class="role" style="animation-delay:0s" x="58" y="124">GenAI &amp; Agentic AI Engineer</text><text class="role" style="animation-delay:3s" x="58" y="124">RAG pipelines on Azure</text><text class="role" style="animation-delay:6s" x="58" y="124">Multi-agent workflows &amp; MCP</text><text class="role" style="animation-delay:9s" x="58" y="124">Python · FastAPI · LangGraph</text></g>
+  <text class="m" x="58" y="46" text-anchor="start" font-size="11" letter-spacing="2" fill="#F5C518" opacity=".9">DRAGON BALL</text>
+  <path class="cut" style="animation-delay:30s" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#F5C518" stroke-width="2" stroke-linecap="round"/>
+</g>
+
     <text class="t" x="56" y="86" font-size="48" font-weight="700" fill="#ECE9E1" letter-spacing="-1.5">Hemant Sharma</text>
-    <g class="m" font-size="17" fill="#3FA7C9">
-      <text class="role" x="58" y="124">GenAI &amp; Agentic AI Engineer</text>
-      <text class="role r2" x="58" y="124">RAG pipelines on Azure</text>
-      <text class="role r3" x="58" y="124">Multi-agent workflows &amp; MCP</text>
-      <text class="role r4" x="58" y="124">Python · FastAPI · LangGraph</text>
-    </g>
-    <path class="cut" d="M600 190 C680 130 760 70 850 22" fill="none" stroke="#3FA7C9" stroke-width="2" stroke-linecap="round"/>
   </g>
   <rect x=".5" y=".5" width="899" height="219" rx="11.5" fill="none" stroke="#1D2224"/>
 </svg>
