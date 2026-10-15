@@ -24,8 +24,8 @@ query($login:String!){
 }"""
 
 THEMES = {
-    "dark": dict(bg="#0D1424", bd="#1E293B", title="#38BDF8", text="#E2E8F0", mut="#94A3B8", track="#1E293B"),
-    "light": dict(bg="#FFFFFF", bd="#D0D7DE", title="#0284C7", text="#0F172A", mut="#57606A", track="#E5E7EB"),
+    "dark": dict(bg="#0B0B0C", bd="#222225", title="#EDEDED", text="#E2E8F0", mut="#94A3B8", track="#222225"),
+    "light": dict(bg="#FFFFFF", bd="#D0D7DE", title="#141414", text="#0F172A", mut="#57606A", track="#E5E7EB"),
 }
 FONT = "-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
 
