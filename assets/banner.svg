@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="170" viewBox="0 0 900 170" role="img" aria-label="Hemant Sharma, GenAI and Agentic AI Engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#1E3A5F"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="170" rx="12" fill="url(#bg)"/>
+  <g fill="none" stroke="#94A3B8" stroke-opacity="0.12">
+    <circle cx="780" cy="40" r="90"/>
+    <circle cx="780" cy="40" r="60"/>
+    <circle cx="140" cy="150" r="70"/>
+  </g>
+  <text x="450" y="80" text-anchor="middle" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="46" font-weight="700" fill="#F8FAFC">Hemant Sharma</text>
+  <rect x="390" y="96" width="120" height="3" rx="1.5" fill="url(#accent)"/>
+  <text x="450" y="130" text-anchor="middle" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" fill="#94A3B8" letter-spacing="1">GenAI &amp; Agentic AI Engineer · Python Developer</text>
+</svg>

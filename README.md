@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0B1220,100:1E3A5F&height=170&section=header&text=Hemant%20Sharma&fontColor=F8FAFC&fontSize=46&fontAlign=50&fontAlignY=42&desc=GenAI%20%26%20Agentic%20AI%20Engineer%20%C2%B7%20Python%20Developer&descColor=94A3B8&descSize=17&descAlignY=66" width="100%" alt="Hemant Sharma" />
+<img src="assets/banner.svg" width="100%" alt="Hemant Sharma, GenAI &amp; Agentic AI Engineer" />
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-hemuush-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hemuush/)
 [![Email](https://img.shields.io/badge/Email-hemant.shrma.3004%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hemant.shrma.3004@gmail.com)
