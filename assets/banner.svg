@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240" role="img" aria-label="Hemant Sharma, GenAI and Agentic AI Engineer">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#070B14"/><stop offset="1" stop-color="#14284A"/>
+      <stop offset="0" stop-color="#05060F"/><stop offset="1" stop-color="#1B1245"/>
     </linearGradient>
     <linearGradient id="ac" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#A78BFA"/>
+      <stop offset="0" stop-color="#22D3EE"/><stop offset=".55" stop-color="#8B5CF6"/><stop offset="1" stop-color="#F472B6"/>
     </linearGradient>
     <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#38BDF8" stop-opacity="0.35"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.45"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
     </radialGradient>
     <style>
       .t{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
@@ -25,12 +25,12 @@
   </defs>
   <rect width="900" height="240" rx="14" fill="url(#bg)"/>
   <circle cx="450" cy="95" r="230" fill="url(#glow)"/>
-  <g stroke="#38BDF8" stroke-opacity="0.35" stroke-width="1.2" fill="none">
+  <g stroke="#A78BFA" stroke-opacity="0.4" stroke-width="1.2" fill="none">
     <path class="edge" d="M90 60 L200 150 L330 50"/>
     <path class="edge" d="M570 190 L690 70 L820 160"/>
     <path class="edge" d="M200 150 L90 205 M690 70 L760 25 M330 50 L450 20"/>
   </g>
-  <g fill="#38BDF8">
+  <g fill="#22D3EE">
     <circle class="node" cx="90" cy="60" r="4"/><circle class="node n2" cx="200" cy="150" r="5"/>
     <circle class="node n3" cx="330" cy="50" r="4"/><circle class="node n4" cx="570" cy="190" r="4"/>
     <circle class="node n5" cx="690" cy="70" r="5"/><circle class="node n2" cx="820" cy="160" r="4"/>
@@ -44,5 +44,5 @@
     <text class="role r3" x="450" y="168">Multi-agent workflows &amp; MCP</text>
     <text class="role r4" x="450" y="168">Python · FastAPI · LangGraph</text>
   </g>
-  <text class="t" x="450" y="212" text-anchor="middle" font-size="13" fill="#64748B" letter-spacing="3">NOIDA, INDIA<tspan class="cursor" fill="#38BDF8"> ▍</tspan></text>
+  <text class="t" x="450" y="212" text-anchor="middle" font-size="13" fill="#64748B" letter-spacing="3">NOIDA, INDIA<tspan class="cursor" fill="#F472B6"> ▍</tspan></text>
 </svg>
