@@ -134,8 +134,14 @@ GenAI and Agentic AI engineer with **4+ years in backend engineering**, the last
 
 <div align="center">
 
-<img src="https://github-readme-stats-fast.vercel.app/api?username=hemuush&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" height="160" alt="GitHub stats" />
-<img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=hemuush&layout=compact&theme=tokyonight&hide_border=true" height="160" alt="Top languages" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hemuush/hemuush/output/stats-dark.svg" />
+  <img alt="GitHub stats" src="https://raw.githubusercontent.com/hemuush/hemuush/output/stats-light.svg" height="230" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hemuush/hemuush/output/langs-dark.svg" />
+  <img alt="Top languages" src="https://raw.githubusercontent.com/hemuush/hemuush/output/langs-light.svg" height="230" />
+</picture>
 
 </div>
 
