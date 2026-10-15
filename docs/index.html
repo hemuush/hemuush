@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hemant Sharma · GenAI & Agentic AI Engineer</title>
+<meta name="description" content="Hemant Sharma: GenAI and Agentic AI engineer building production RAG, multi-agent and MCP systems on Azure.">
+<meta property="og:title" content="Hemant Sharma · GenAI & Agentic AI Engineer">
+<meta property="og:description" content="Production GenAI systems on Azure: RAG pipelines, multi-agent workflows and MCP integrations.">
+<style>
+:root{--bg:#070b14;--bg2:#0d1424;--card:rgba(255,255,255,.04);--bd:rgba(148,163,184,.18);--tx:#e2e8f0;--mut:#94a3b8;--ac:#38bdf8;--ac2:#a78bfa;--glow:rgba(56,189,248,.18)}
+[data-theme=light]{--bg:#f8fafc;--bg2:#eef2f7;--card:rgba(15,23,42,.04);--bd:rgba(15,23,42,.14);--tx:#0f172a;--mut:#475569;--ac:#0284c7;--ac2:#7c3aed;--glow:rgba(2,132,199,.15)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:16px/1.65 -apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--tx);overflow-x:hidden;transition:background .3s,color .3s}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+#bgfx{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));z-index:60}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 70%,transparent);border-bottom:1px solid var(--bd)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-weight:800;letter-spacing:-.5px}.logo span{color:var(--ac)}
+.links{display:flex;gap:6px;align-items:center}
+.links a{padding:6px 12px;border-radius:8px;color:var(--mut);font-size:14px;transition:.2s}
+.links a:hover,.links a.on{color:var(--tx);background:var(--card)}
+.tbtn{border:1px solid var(--bd);background:var(--card);color:var(--tx);width:36px;height:36px;border-radius:10px;cursor:pointer;font-size:16px}
+.hero{min-height:88vh;display:flex;align-items:center;padding:70px 0}
+.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--bd);background:var(--card);padding:6px 14px;border-radius:99px;font-size:13px;color:var(--mut)}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 #22c55e;animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+h1{font-size:clamp(40px,7vw,76px);line-height:1.05;letter-spacing:-2px;margin:22px 0 14px;font-weight:800}
+.grad{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.type{font:600 clamp(18px,2.6vw,26px)/1.4 "SF Mono",Menlo,Consolas,monospace;color:var(--mut);min-height:1.5em}
+.type b{color:var(--ac);font-weight:600}.caret{display:inline-block;width:2px;height:1.1em;background:var(--ac);vertical-align:-3px;margin-left:3px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.lead{max-width:640px;margin:22px 0 32px;color:var(--mut);font-size:18px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:12px;font-weight:600;border:1px solid var(--bd);background:var(--card);transition:.25s;display:inline-block}
+.btn:hover{transform:translateY(-2px);border-color:var(--ac);box-shadow:0 8px 30px var(--glow)}
+.btn.p{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#06101f;border:0}
+section{padding:80px 0}
+.eyebrow{color:var(--ac);font:600 13px "SF Mono",Menlo,monospace;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:clamp(28px,4vw,40px);letter-spacing:-1px;margin:8px 0 34px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.card{border:1px solid var(--bd);background:var(--card);border-radius:18px;padding:24px;transition:.3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);border-color:var(--ac);box-shadow:0 14px 40px var(--glow)}
+.num{font-size:44px;font-weight:800;letter-spacing:-1.5px}
+.lbl{color:var(--mut);font-size:14px}
+.focus{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.focus .ic{font-size:26px;margin-bottom:10px}.focus h3{font-size:18px;margin-bottom:6px}.focus p{color:var(--mut);font-size:15px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tab{border:1px solid var(--bd);background:var(--card);color:var(--mut);padding:8px 16px;border-radius:99px;cursor:pointer;font:600 14px inherit;font-family:inherit;transition:.2s}
+.tab:hover{color:var(--tx)}.tab.on{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#06101f;border-color:transparent}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid var(--bd);background:var(--card);padding:8px 16px;border-radius:12px;font-size:14px;transition:.25s}
+.chip:hover{transform:translateY(-3px) scale(1.04);border-color:var(--ac)}
+.chip.hide{display:none}
+.tl{position:relative;padding-left:30px;border-left:2px solid var(--bd)}
+.tl .item{position:relative;margin-bottom:34px}
+.tl .item:before{content:"";position:absolute;left:-39px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--ac);box-shadow:0 0 0 5px var(--glow)}
+.tl h3{font-size:20px}.tl .co{color:var(--ac);font-weight:600}.tl .dt{color:var(--mut);font:13px "SF Mono",Menlo,monospace}
+.tl p{color:var(--mut);margin-top:8px}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.edu .card b{display:block;margin-bottom:4px}.edu .card span{color:var(--mut);font-size:14px}
+.contact{text-align:center}
+.contact p{color:var(--mut);max-width:520px;margin:0 auto 28px;font-size:18px}
+footer{border-top:1px solid var(--bd);padding:28px 0;text-align:center;color:var(--mut);font-size:14px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(max-width:640px){.links a:not(.keep){display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="bgfx" aria-hidden="true"></canvas>
+<div class="progress" id="bar"></div>
+<nav><div class="wrap">
+  <a class="logo" href="#top">hemant<span>.</span>dev</a>
+  <div class="links">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#education">Education</a>
+    <a class="keep" href="#contact">Contact</a>
+    <button class="tbtn" id="theme" aria-label="Toggle theme">☾</button>
+  </div>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <span class="pill"><i class="dot"></i> Open to collaborations</span>
+  <h1>Hi, I'm <span class="grad">Hemant Sharma</span></h1>
+  <div class="type"><span id="typed"></span><span class="caret"></span></div>
+  <p class="lead">I build production GenAI systems on Azure: RAG pipelines, multi-agent workflows and MCP-based integrations, backed by 4+ years of backend engineering.</p>
+  <div class="btns">
+    <a class="btn p" href="#contact">Get in touch</a>
+    <a class="btn" href="https://www.linkedin.com/in/hemuush/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/hemuush" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <div class="eyebrow rv">About</div><h2 class="rv">Backend roots, GenAI focus</h2>
+  <div class="focus">
+    <div class="card rv"><div class="ic">🧠</div><h3>Agentic AI</h3><p>Multi-agent orchestration with LangChain and LangGraph, with tools exposed through MCP servers.</p></div>
+    <div class="card rv"><div class="ic">🔎</div><h3>RAG</h3><p>Semantic chunking and embedding search on Azure AI Search and ChromaDB.</p></div>
+    <div class="card rv"><div class="ic">☁️</div><h3>Cloud on Azure</h3><p>Azure AI Foundry, Container Apps, CI/CD, monitoring and cost optimisation.</p></div>
+    <div class="card rv"><div class="ic">⚙️</div><h3>Backend</h3><p>Python APIs with FastAPI and Django, data pipelines and automation.</p></div>
+    <div class="card rv"><div class="ic">🗄️</div><h3>Data &amp; Storage</h3><p>CosmosDB, Redis, MongoDB, MySQL and MS SQL, plus Azure Document Intelligence for parsing.</p></div>
+    <div class="card rv"><div class="ic">✅</div><h3>Quality</h3><p>LLM output evaluation, prompt engineering and pytest.</p></div>
+  </div>
+  <div class="stats" style="margin-top:16px">
+    <div class="card rv"><div class="num grad" data-to="4" data-suf="+">0</div><div class="lbl">years in backend engineering</div></div>
+    <div class="card rv"><div class="num grad" data-to="2" data-suf="+">0</div><div class="lbl">years building production GenAI</div></div>
+    <div class="card rv"><div class="num grad" data-to="70" data-suf="%">0</div><div class="lbl">speech-model hosting cost reduced</div></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="eyebrow rv">Skills</div><h2 class="rv">Tools I work with</h2>
+  <div class="tabs rv" id="tabs"></div>
+  <div class="chips rv" id="chips"></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="eyebrow rv">Experience</div><h2 class="rv">Where I've worked</h2>
+  <div class="tl">
+    <div class="item rv"><div class="dt">Dec 2024 – Present · Noida</div><h3>Senior Executive</h3><div class="co">Walker Chandiok &amp; Co LLP (Grant Thornton India)</div></div>
+    <div class="item rv"><div class="dt">Jan 2022 – Nov 2024 · Noida</div><h3>Analyst</h3><div class="co">KPMG India</div></div>
+  </div>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <div class="eyebrow rv">Education</div><h2 class="rv">Learning</h2>
+  <div class="edu">
+    <div class="card rv"><b>B.Tech, Computer Science</b><span>Punjabi University</span></div>
+    <div class="card rv"><b>Machine Learning</b><span>Stanford (Coursera)</span></div>
+    <div class="card rv"><b>Python for Everybody</b><span>Coursera</span></div>
+    <div class="card rv"><b>5-star Python</b><span>HackerRank</span></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+  <div class="eyebrow rv">Contact</div><h2 class="rv">Let's build something together</h2>
+  <p class="rv">Open to collaborations on GenAI, agents and backend systems.</p>
+  <div class="btns rv" style="justify-content:center">
+    <a class="btn p" href="mailto:hemant.shrma.3004@gmail.com">Email me</a>
+    <a class="btn" href="https://www.linkedin.com/in/hemuush/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </div>
+</div></section>
+<footer>© <span id="yr"></span> Hemant Sharma · Noida, India</footer>
+
+<script>
+const $=s=>document.querySelector(s);
+// theme
+const root=document.documentElement,tb=$('#theme');
+try{const t=localStorage.getItem('theme');if(t)root.dataset.theme=t}catch(e){}
+const syncT=()=>tb.textContent=root.dataset.theme==='dark'?'☾':'☀';syncT();
+tb.onclick=()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}syncT()};
+$('#yr').textContent=new Date().getFullYear();
+// typing
+const words=['GenAI & Agentic AI Engineer','RAG pipeline builder','Multi-agent workflow designer','MCP integrations on Azure'];
+let wi=0,ci=0,del=false;const el=$('#typed');
+(function tick(){const w=words[wi];el.textContent=w.slice(0,ci);
+ if(!del&&ci===w.length){del=true;return setTimeout(tick,1400)}
+ if(del&&ci===0){del=false;wi=(wi+1)%words.length}
+ ci+=del?-1:1;setTimeout(tick,del?28:60)})();
+// skills
+const skills={
+ 'GenAI & Agentic AI':['LangChain','LangGraph','MCP (Model Context Protocol)','RAG','Semantic Chunking','Embedding Search','Prompt Engineering','LLM Output Evaluation','Multi-Agent Orchestration'],
+ 'LLM Providers':['OpenAI API','Anthropic API','Azure OpenAI'],
+ 'Languages & Frameworks':['Python','FastAPI','Django','Pandas','NumPy','Scikit-learn','PyTorch','OpenCV'],
+ 'Cloud & DevOps':['Azure AI Foundry','Azure Container Apps','Azure DevOps (CI/CD)','Docker','Azure Cost Management','Application Insights','App Services'],
+ 'Data & Storage':['CosmosDB','Azure AI Search','ChromaDB','Azure Document Intelligence','Redis Cache','MongoDB','MySQL','MS SQL'],
+ 'Tools & Practices':['Playwright','Git','Postman','pytest','API Management','CI/CD','Application Monitoring']};
+const tabs=$('#tabs'),chips=$('#chips');
+const cats=['All',...Object.keys(skills)];
+cats.forEach((c,i)=>{const b=document.createElement('button');b.className='tab'+(i?'':' on');b.textContent=c;b.onclick=()=>{
+ tabs.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));
+ chips.querySelectorAll('.chip').forEach(x=>x.classList.toggle('hide',c!=='All'&&x.dataset.c!==c))};tabs.append(b)});
+Object.entries(skills).forEach(([c,l])=>l.forEach(s=>{const d=document.createElement('span');d.className='chip';d.dataset.c=c;d.textContent=s;chips.append(d)}));
+// reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+ const n=e.target.querySelector('.num');if(n){const to=+n.dataset.to;let v=0;const st=performance.now();
+ (function f(t){const p=Math.min((t-st)/1200,1);n.textContent=Math.round(to*(1-Math.pow(1-p,3)))+n.dataset.suf;if(p<1)requestAnimationFrame(f)})(st)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(x=>io.observe(x));
+// progress + active link
+const bar=$('#bar'),secs=[...document.querySelectorAll('section')],ls=[...document.querySelectorAll('.links a[href^="#"]')];
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+ const y=scrollY+120;const cur=secs.filter(s=>s.offsetTop<=y).pop();ls.forEach(a=>a.classList.toggle('on',cur&&a.getAttribute('href')==='#'+cur.id))},{passive:true});
+// network background
+const cv=$('#bgfx'),cx=cv.getContext('2d');let W,H,P=[];const mouse={x:-999,y:-999};
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;P=Array.from({length:Math.min(70,W/18|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}))}
+addEventListener('resize',rs);addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});rs();
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)(function draw(){cx.clearRect(0,0,W,H);
+ const c=getComputedStyle(root).getPropertyValue('--ac').trim()||'#38bdf8';cx.fillStyle=c;cx.strokeStyle=c;
+ P.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+  cx.globalAlpha=.5;cx.beginPath();cx.arc(p.x,p.y,1.6,0,7);cx.fill();
+  for(let j=i+1;j<P.length;j++){const q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<130){cx.globalAlpha=(1-d/130)*.22;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke()}}
+  const dm=Math.hypot(p.x-mouse.x,p.y-mouse.y);if(dm<170){cx.globalAlpha=(1-dm/170)*.5;cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(mouse.x,mouse.y);cx.stroke()}});
+ requestAnimationFrame(draw)})();
+</script>
+</body>
+</html>

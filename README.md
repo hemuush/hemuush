@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="assets/banner.svg" width="100%" alt="Hemant Sharma, GenAI &amp; Agentic AI Engineer" />
+<a href="https://hemuush.github.io/hemuush/"><img src="assets/banner.svg" width="100%" alt="Hemant Sharma, GenAI &amp; Agentic AI Engineer" /></a>
+
+[![Portfolio](https://img.shields.io/badge/%E2%9C%A6%20Open%20interactive%20portfolio-38BDF8?style=for-the-badge&labelColor=0B1220)](https://hemuush.github.io/hemuush/)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-hemuush-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hemuush/)
 [![Email](https://img.shields.io/badge/Email-hemant.shrma.3004%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hemant.shrma.3004@gmail.com)
