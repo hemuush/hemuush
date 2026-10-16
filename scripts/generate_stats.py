@@ -3,6 +3,7 @@
 Usage: GITHUB_TOKEN=... python scripts/generate_stats.py <username> <out_dir>
 Writes stats-{dark,light}.svg and langs-{dark,light}.svg
 """
+import base64
 import json
 import os
 import sys
@@ -23,11 +24,12 @@ query($login:String!){
   }
 }"""
 
-THEMES = {
-    "dark": dict(bg="#090B0B", bd="#1D2224", title="#3FA7C9", text="#E2E8F0", mut="#94A3B8", track="#1D2224"),
-    "light": dict(bg="#FFFFFF", bd="#D0D7DE", title="#141414", text="#0F172A", mut="#57606A", track="#E5E7EB"),
-}
+# Matches the portfolio site: black card, crimson accent, Anton display type
+THEME = dict(bg="#070707", bd="#222224", ac="#E0262F", text="#F1EFEA", mut="#8E8B86", line="#222224")
 FONT = "-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+ANTON = base64.b64encode(
+    open(os.path.join(os.path.dirname(__file__), "..", "assets", "fonts", "anton-sub.woff2"), "rb").read()
+).decode()
 
 
 def fetch(login, token):
@@ -60,54 +62,67 @@ def fetch(login, token):
     )
 
 
-def card(w, h, t, inner, title):
+def card(w, h, inner, title):
+    t = THEME
+    star = "M0 -6L1.6 -1.6L6 0L1.6 1.6L0 6L-1.6 1.6L-6 0L-1.6 -1.6Z"
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{escape(title)}">'
-        f'<style>.f{{font-family:{FONT}}}@keyframes in{{from{{opacity:0;transform:translateY(6px)}}to{{opacity:1;transform:none}}}}'
-        f'.r{{animation:in .6s ease both}}@keyframes grow{{from{{transform:scaleX(0)}}to{{transform:scaleX(1)}}}}'
-        f'.bar{{transform-origin:left;transform-box:fill-box;animation:grow 1s ease both}}</style>'
-        f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" rx="12" fill="{t["bg"]}" stroke="{t["bd"]}"/>'
-        f'<text class="f" x="24" y="38" font-size="17" font-weight="700" fill="{t["title"]}">{escape(title)}</text>'
+        f"<style>@font-face{{font-family:AntonE;src:url(data:font/woff2;base64,{ANTON}) format('woff2')}}"
+        f".f{{font-family:{FONT}}}.d{{font-family:AntonE,Impact,'Arial Narrow',sans-serif}}"
+        f"@keyframes in{{from{{opacity:0;transform:translateY(6px)}}to{{opacity:1;transform:none}}}}"
+        f".r{{animation:in .6s cubic-bezier(.22,.8,.2,1) both}}@keyframes grow{{from{{transform:scaleX(0)}}to{{transform:scaleX(1)}}}}"
+        f".bar{{transform-origin:left;transform-box:fill-box;animation:grow 1s cubic-bezier(.22,.8,.2,1) both}}</style>"
+        f'<rect x=".5" y=".5" width="{w-1}" height="{h-1}" fill="{t["bg"]}" stroke="{t["bd"]}"/>'
+        f'<text class="f" x="24" y="30" font-size="10" font-weight="500" letter-spacing="1.6" fill="{t["ac"]}">GITHUB · LIVE</text>'
+        f'<text class="d" x="24" y="60" font-size="26" letter-spacing=".5" fill="{t["text"]}">{escape(title.upper())}</text>'
+        f'<path d="{star}" transform="translate({w-30},26)" fill="{t["ac"]}"/>'
         f"{inner}</svg>"
     )
 
 
-def stats_svg(d, t, login):
-    rows = [("Total commits (last year)", d["commits"]), ("Pull requests", d["prs"]), ("Issues", d["issues"]),
-            ("Stars earned", d["stars"]), ("Public repositories", d["repos"]), ("Followers", d["followers"])]
+def stats_svg(d, login):
+    t = THEME
+    rows = [("Commits · last year", d["commits"]), ("Pull requests", d["prs"]), ("Public repos", d["repos"]),
+            ("Stars earned", d["stars"]), ("Issues", d["issues"]), ("Followers", d["followers"])]
     out = []
     for i, (k, v) in enumerate(rows):
-        y = 74 + i * 28
+        col, row = i % 2, i // 2
+        x, y = 24 + col * 178, 76 + row * 58
         out.append(
-            f'<g class="r" style="animation-delay:{i*.08:.2f}s"><text class="f" x="24" y="{y}" font-size="14" fill="{t["mut"]}">{k}</text>'
-            f'<text class="f" x="371" y="{y}" font-size="14" font-weight="700" text-anchor="end" fill="{t["text"]}">{v:,}</text></g>'
+            f'<g class="r" style="animation-delay:{i*.07:.2f}s">'
+            f'<line x1="{x}" y1="{y}" x2="{x+164}" y2="{y}" stroke="{t["line"]}"/>'
+            f'<text class="f" x="{x}" y="{y+17}" font-size="9.5" font-weight="500" letter-spacing="1.3" fill="{t["mut"]}">{escape(k.upper())}</text>'
+            f'<text class="d" x="{x}" y="{y+49}" font-size="30" fill="{t["ac"]}">{v:,}</text></g>'
         )
-    return card(395, 250, t, "".join(out), f"{login}'s GitHub stats")
+    return card(395, 260, "".join(out), "GitHub stats")
 
 
-def langs_svg(d, t):
+def langs_svg(d):
+    t = THEME
     items = sorted(d["langs"].items(), key=lambda kv: -kv[1][0])[:6]
     total = sum(v[0] for _, v in items) or 1
     out = []
-    for i, (name, (size, color)) in enumerate(items):
-        y = 72 + i * 28
+    for i, (name, (size, _color)) in enumerate(items):
+        y = 92 + i * 27
         pct = size / total * 100
+        op = max(1 - i * 0.15, 0.3)
         out.append(
-            f'<g class="r" style="animation-delay:{i*.08:.2f}s"><text class="f" x="24" y="{y}" font-size="13" fill="{t["text"]}">{escape(name)}</text>'
-            f'<text class="f" x="371" y="{y}" font-size="13" text-anchor="end" fill="{t["mut"]}">{pct:.1f}%</text>'
-            f'<rect x="24" y="{y+7}" width="347" height="7" rx="3.5" fill="{t["track"]}"/>'
-            f'<rect class="bar" style="animation-delay:{i*.08:.2f}s" x="24" y="{y+7}" width="{max(347*pct/100,4):.1f}" height="7" rx="3.5" fill="{color}"/></g>'
+            f'<g class="r" style="animation-delay:{i*.07:.2f}s"><text class="f" x="24" y="{y}" font-size="10.5" font-weight="500" letter-spacing="1.2" fill="{t["text"]}">{escape(name.upper())}</text>'
+            f'<text class="d" x="371" y="{y+1}" font-size="15" text-anchor="end" fill="{t["ac"]}">{pct:.1f}%</text>'
+            f'<rect x="24" y="{y+7}" width="347" height="3" fill="{t["line"]}"/>'
+            f'<rect class="bar" style="animation-delay:{i*.07:.2f}s" x="24" y="{y+7}" width="{max(347*pct/100,3):.1f}" height="3" fill="{t["ac"]}" fill-opacity="{op:.2f}"/></g>'
         )
-    return card(395, 250, t, "".join(out), "Top languages")
+    return card(395, 260, "".join(out), "Top languages")
 
 
 def main():
     login, out_dir = sys.argv[1], sys.argv[2]
     os.makedirs(out_dir, exist_ok=True)
     d = json.load(open(sys.argv[3])) if len(sys.argv) > 3 else fetch(login, os.environ["GITHUB_TOKEN"])
-    for name, t in THEMES.items():
-        open(os.path.join(out_dir, f"stats-{name}.svg"), "w").write(stats_svg(d, t, login))
-        open(os.path.join(out_dir, f"langs-{name}.svg"), "w").write(langs_svg(d, t))
+    stats, langs = stats_svg(d, login), langs_svg(d)
+    for name in ("dark", "light"):  # same design for both; README picks by colour scheme
+        open(os.path.join(out_dir, f"stats-{name}.svg"), "w").write(stats)
+        open(os.path.join(out_dir, f"langs-{name}.svg"), "w").write(langs)
 
 
 if __name__ == "__main__":
