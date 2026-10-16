@@ -25,7 +25,7 @@ query($login:String!){
 }"""
 
 # Matches the portfolio site: black card, crimson accent, Anton display type
-THEME = dict(bg="#070707", bd="#222224", ac="#E0262F", text="#F1EFEA", mut="#8E8B86", line="#222224")
+THEME = dict(bg="#070707", bd="#222224", ac="#EB3B43", text="#F1EFEA", mut="#8E8B86", line="#222224")
 FONT = "-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
 ANTON = base64.b64encode(
     open(os.path.join(os.path.dirname(__file__), "..", "assets", "fonts", "anton-sub.woff2"), "rb").read()

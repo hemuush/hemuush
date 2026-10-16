@@ -13,7 +13,7 @@
       .tw{transform-box:fill-box;transform-origin:center;animation:tw 3s ease-in-out infinite}@keyframes tw{50%{transform:scale(.6) rotate(45deg)}}
     </style>
     <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset=".05" stop-color="#E0262F"/><stop offset=".7" stop-color="#4A0C10"/><stop offset="1" stop-color="#070707" stop-opacity="0"/>
+      <stop offset=".05" stop-color="#EB3B43"/><stop offset=".7" stop-color="#4A0C10"/><stop offset="1" stop-color="#070707" stop-opacity="0"/>
     </linearGradient>
     <clipPath id="c"><rect width="900" height="340" rx="12"/></clipPath>
   </defs>
@@ -23,20 +23,20 @@
     <g class="rise r2">
       <text class="s" x="44" y="190" font-size="46" fill="#F1EFEA">Hello, I'm</text>
       <text class="d" x="42" y="266" font-size="78" fill="#F1EFEA" letter-spacing="1">HEMANT SHARMA</text>
-      <text class="t" x="44" y="302" font-size="16" font-weight="600" fill="#E0262F" letter-spacing="1">GENAI &amp; AGENTIC AI ENGINEER</text>
+      <text class="t" x="44" y="302" font-size="16" font-weight="600" fill="#EB3B43" letter-spacing="1">GENAI &amp; AGENTIC AI ENGINEER</text>
     </g>
     <g class="rise r3" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
       <line x1="640" y1="162" x2="860" y2="162" stroke="#222224"/>
-      <text class="d" x="640" y="204" font-size="36" fill="#E0262F">4+</text><text x="720" y="190" font-size="10" fill="#8E8B86" letter-spacing="1.4">YEARS BACKEND</text><text x="720" y="204" font-size="10" fill="#8E8B86" letter-spacing="1.4">ENGINEERING</text>
+      <text class="d" x="640" y="204" font-size="36" fill="#EB3B43">4+</text><text x="720" y="190" font-size="10" fill="#8E8B86" letter-spacing="1.4">YEARS BACKEND</text><text x="720" y="204" font-size="10" fill="#8E8B86" letter-spacing="1.4">ENGINEERING</text>
       <line x1="640" y1="218" x2="860" y2="218" stroke="#222224"/>
-      <text class="d" x="640" y="260" font-size="36" fill="#E0262F">2+</text><text x="720" y="246" font-size="10" fill="#8E8B86" letter-spacing="1.4">YEARS PRODUCTION</text><text x="720" y="260" font-size="10" fill="#8E8B86" letter-spacing="1.4">GENAI</text>
+      <text class="d" x="640" y="260" font-size="36" fill="#EB3B43">2+</text><text x="720" y="246" font-size="10" fill="#8E8B86" letter-spacing="1.4">YEARS PRODUCTION</text><text x="720" y="260" font-size="10" fill="#8E8B86" letter-spacing="1.4">GENAI</text>
       <line x1="640" y1="274" x2="860" y2="274" stroke="#222224"/>
-      <text class="d" x="640" y="314" font-size="36" fill="#E0262F">70%</text><text x="720" y="300" font-size="10" fill="#8E8B86" letter-spacing="1.4">HOSTING COST</text><text x="720" y="314" font-size="10" fill="#8E8B86" letter-spacing="1.4">REDUCED</text>
+      <text class="d" x="640" y="314" font-size="36" fill="#EB3B43">70%</text><text x="720" y="300" font-size="10" fill="#8E8B86" letter-spacing="1.4">HOSTING COST</text><text x="720" y="314" font-size="10" fill="#8E8B86" letter-spacing="1.4">REDUCED</text>
     </g>
     <g class="rise r4 t" font-size="10.5" letter-spacing="1.6" font-weight="500">
-      <text x="44" y="30" fill="#E0262F">GENAI ENGINEER</text><text x="44" y="44" fill="#8E8B86">AGENTIC AI · PYTHON</text>
+      <text x="44" y="30" fill="#EB3B43">GENAI ENGINEER</text><text x="44" y="44" fill="#8E8B86">AGENTIC AI · PYTHON</text>
       <text x="842" y="36" text-anchor="end" fill="#F1EFEA">OPEN TO COLLABORATIONS</text>
-      <path class="tw" d="M856 30l1.5 4.5 4.5 1.5-4.5 1.5-1.5 4.5-1.5-4.5-4.5-1.5 4.5-1.5z" fill="#E0262F"/>
+      <path class="tw" d="M856 30l1.5 4.5 4.5 1.5-4.5 1.5-1.5 4.5-1.5-4.5-4.5-1.5 4.5-1.5z" fill="#EB3B43"/>
       
     </g>
   </g>

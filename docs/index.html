@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Hemant Sharma · GenAI & Agentic AI Engineer</title>
-<meta name="description" content="Hemant Sharma: GenAI and Agentic AI engineer building production RAG, multi-agent and MCP systems on Azure.">
+<meta name="description" content="Hemant Sharma, GenAI & Agentic AI engineer in Noida, India. I build production RAG pipelines, multi-agent workflows and MCP integrations on Azure.">
 <meta property="og:title" content="Hemant Sharma · GenAI & Agentic AI Engineer">
 <meta property="og:description" content="Production GenAI systems on Azure: RAG pipelines, multi-agent workflows and MCP integrations.">
 <meta property="og:type" content="website">
@@ -15,12 +15,16 @@
 <meta name="twitter:image" content="https://hemuush.github.io/hemuush/og.png">
 <meta name="theme-color" content="#070707">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="canonical" href="https://hemuush.github.io/hemuush/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Hemant Sharma","jobTitle":"GenAI & Agentic AI Engineer","url":"https://hemuush.github.io/hemuush/","email":"mailto:hemant.shrma.3004@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Noida","addressCountry":"IN"},"worksFor":{"@type":"Organization","name":"Walker Chandiok & Co LLP (Grant Thornton India)"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Punjabi University"},"knowsAbout":["Generative AI","Agentic AI","Retrieval-Augmented Generation","Model Context Protocol","LangGraph","Python","FastAPI","Microsoft Azure"],"sameAs":["https://www.linkedin.com/in/hemuush/","https://github.com/hemuush"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Allura&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
 <style>
-@property --ac{syntax:'<color>';inherits:true;initial-value:#e0262f}
-:root{--bg:#070707;--bg2:#0e0e0f;--bg3:#151517;--tx:#f1efea;--mut:#8e8b86;--line:#222224;--ac:#e0262f;--ease:cubic-bezier(.22,.8,.2,1);transition:--ac .8s var(--ease)}
-[data-t=crimson]{--ac:#e0262f}[data-t=tide]{--ac:#2fa3d6}[data-t=ember]{--ac:#f2801f}[data-t=violet]{--ac:#8b6cf6}[data-t=jade]{--ac:#38b27a}[data-t=gold]{--ac:#e8b524}
+@property --ac{syntax:'<color>';inherits:true;initial-value:#eb3b43}
+:root{--bg:#070707;--bg2:#0e0e0f;--bg3:#151517;--tx:#f1efea;--mut:#8e8b86;--line:#222224;--ac:#eb3b43;--ease:cubic-bezier(.22,.8,.2,1);transition:--ac .8s var(--ease)}
+[data-t=crimson]{--ac:#eb3b43}[data-t=tide]{--ac:#2fa3d6}[data-t=ember]{--ac:#f2801f}[data-t=violet]{--ac:#8b6cf6}[data-t=jade]{--ac:#38b27a}[data-t=gold]{--ac:#e8b524}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
 body{font:15px/1.65 Inter,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -250,6 +254,25 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
 .curdot{position:fixed;left:0;top:0;width:5px;height:5px;border-radius:50%;background:var(--ac);pointer-events:none;z-index:91;transform:translate(-50%,-50%);opacity:0}
 .curdot.on{opacity:1}
 @media(pointer:coarse){.cur,.curdot{display:none}}
+/* research-driven polish */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:16px;top:-60px;z-index:100;background:var(--ac);color:#fff;padding:10px 16px;font:600 13px Inter,sans-serif;transition:top .2s}
+.skip:focus{top:16px}
+.hcta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hbtn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border:1px solid var(--line);background:transparent;color:var(--tx);font:600 12.5px Inter,sans-serif;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;transition:border-color .25s,background .25s,transform .3s var(--ease)}
+.hbtn:hover{border-color:var(--ac);transform:translateY(-2px)}
+.hbtn.p{background:var(--ac);border-color:var(--ac);color:#fff}
+.tri .tri-h{font-size:26px;margin-bottom:26px}
+.totop{position:fixed;right:20px;bottom:76px;z-index:39;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(8px);color:var(--tx);font-size:18px;opacity:0;transform:translateY(10px);pointer-events:none;transition:.3s var(--ease)}
+.totop.show{opacity:1;transform:none;pointer-events:auto}.totop:hover{border-color:var(--ac);color:var(--ac)}
+footer kbd{font:500 11px "JetBrains Mono",monospace;border:1px solid var(--line);padding:1px 6px}
+:focus-visible{outline:2px solid var(--ac)!important;outline-offset:3px}
+@media(forced-colors:active){:focus-visible{outline-color:Highlight!important}}
+@media(pointer:coarse){.dock button{width:44px;height:44px}.tab{min-height:40px}}
+@media print{*{animation:none!important;transition:none!important}body{background:#fff!important;color:#000!important}.dock,.ai,.ai-fab,.cmdk,.cur,.curdot,.totop,.toast,.vside,.giant,.visual,.kbd,form,.hcta,.skip{display:none!important}
+ *{color:#000!important;background:transparent!important;box-shadow:none!important;-webkit-text-fill-color:#000!important}.rv{opacity:1!important;transform:none!important}
+ section,.tri{break-inside:avoid;padding:20px 0!important}.hero{min-height:0!important;padding-top:0!important}.hgrid{padding-top:10px!important}
+ a[href^="http"]:after{content:" (" attr(href) ")";font-size:10px}}
 /* dock */
 .dock{position:fixed;right:20px;bottom:20px;z-index:40;display:flex;gap:4px;padding:6px;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px)}
 .dock button{width:30px;height:30px;border:0;background:transparent;cursor:pointer;display:grid;place-items:center;transition:transform .3s var(--ease)}
@@ -266,6 +289,7 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
   <header class="topbar cap">
     <div class="l"><b>GenAI Engineer</b><span>Agentic AI · Python</span></div>
@@ -273,6 +297,7 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
     <div class="r"><button class="kbd" id="cmdBtn" type="button">⌘K</button>Open to collaborations <i class="star"></i></div>
   </header>
 
+  <main id="main">
   <div class="hero" id="top">
     <div class="giant" aria-hidden="true" id="giant">PORTFOLIO</div>
     <div class="hgrid">
@@ -281,6 +306,7 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
         <h1 class="name d">Hemant<br>Sharma</h1>
         <div class="role">GenAI &amp; Agentic<br>AI Engineer</div>
         <p class="lead">I build production GenAI systems on Azure: RAG pipelines, multi-agent workflows and MCP-based integrations, backed by 4+ years of backend engineering.</p>
+        <div class="hcta"><a class="hbtn p" href="#contact">Get in touch →</a><button class="hbtn" type="button" id="heroAI">Ask my AI</button></div>
         <div class="loc cap"><i></i>Based in Noida, India</div>
       </div>
       <div class="visual">
@@ -351,13 +377,14 @@ async def chat(req):
   <section id="stack">
     <div class="shd rv"><h2 class="d">Tools I use</h2><span class="ln"></span><span class="more cap">Hover a tool</span></div>
     <div class="stack rv" id="tools"></div>
+    <noscript><p style="color:var(--mut)">Python, FastAPI, Django, LangChain, LangGraph, OpenAI, Anthropic, Azure, Docker, PyTorch, pandas, NumPy, scikit-learn, OpenCV, Redis, MongoDB, MySQL, Git, Postman, pytest.</p></noscript>
   </section>
 </div>
 
 <div class="wrap">
   <div class="tri" id="skills">
     <div class="rv">
-      <h3 class="d">Education &amp; Skills</h3>
+      <h2 class="d tri-h">Education &amp; Skills</h2>
       <div class="sub">Education</div>
       <div class="ed"><div><b>B.Tech, Computer Science</b><span>Punjabi University</span></div><em>Degree</em></div>
       <div class="ed"><div><b>Machine Learning</b><span>Stanford (Coursera)</span></div><em>Course</em></div>
@@ -368,7 +395,7 @@ async def chat(req):
       <div class="tags" id="tags"></div>
     </div>
     <div class="rv" style="--i:1">
-      <h3 class="d">Work process</h3>
+      <h2 class="d tri-h">Work process</h2>
       <div class="proc"><span class="fill" id="pfill"></span>
         <div class="step"><span class="no">01</span><span class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><div><b>Discover</b><span>Understand the workflow, the users and what "good" looks like.</span></div></div>
         <div class="step"><span class="no">02</span><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h6"/></svg></span><div><b>Design</b><span>Pick retrieval, agent graph and tools; define evals up front.</span></div></div>
@@ -411,31 +438,34 @@ async def chat(req):
     </form>
   </div>
 
-  <footer><span>© <span id="yr"></span> Hemant Sharma</span><span>GenAI &amp; Agentic AI Engineer · Noida, India</span></footer>
+</main>
+  <footer><span>© <span id="yr"></span> Hemant Sharma</span><span>Updated Oct 2026 · Press <kbd>?</kbd> for shortcuts</span></footer>
+<a class="totop" id="totop" href="#top" aria-label="Back to top">↑</a>
 </div>
 <div class="vside" aria-hidden="true"><b>Hemant Sharma</b> — Portfolio © 2026</div>
 <div class="dock" id="dock" role="group" aria-label="Accent colour"></div>
 <button class="ai-fab" id="aiFab" aria-expanded="false" aria-controls="ai"><i class="dot"></i><span>Ask my AI</span></button>
 <section class="ai" id="ai" aria-label="Ask my AI assistant" style="padding:0;border-bottom:1px solid var(--line)">
   <header><div><b>Ask my AI</b><small>Retrieval over my profile · runs in your browser</small></div><button id="aiClose" aria-label="Close">×</button></header>
-  <div class="log" id="aiLog" aria-live="polite"></div>
+  <div class="log" id="aiLog"></div><div class="sr" id="aiStatus" role="status" aria-live="polite" aria-atomic="true"></div>
   <div class="sugg" id="aiSugg"></div>
   <div class="note">A tiny retrieval demo: it finds the best-matching facts and cites the section. No external API.</div>
   <form id="aiForm"><input id="aiIn" placeholder="Ask about skills, experience, RAG…" autocomplete="off" aria-label="Your question"><button>Ask</button></form>
 </section>
 <div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Command palette"><div class="box">
-  <input id="cmdIn" placeholder="Type a command or search…" autocomplete="off" aria-label="Command">
-  <ul id="cmdList"></ul>
-  <div class="ft"><span>↑↓ navigate</span><span>↵ select</span><span>esc close</span></div>
+  <input id="cmdIn" placeholder="Type a command or search…" autocomplete="off" aria-label="Command" role="combobox" aria-expanded="true" aria-controls="cmdList" aria-autocomplete="list">
+  <ul id="cmdList" role="listbox" aria-label="Commands"></ul>
+  <div class="sr" id="cmdCount" role="status" aria-live="polite"></div>
+  <div class="ft"><span>↑↓ navigate</span><span>↵ select</span><span>esc close</span><span>? shortcuts</span></div>
 </div></div>
 <div class="cur" id="cur"></div><div class="curdot" id="curdot"></div>
-<div class="toast" id="toast">Email copied</div>
+<div class="toast" id="toast" role="status" aria-live="polite">Email copied</div>
 
 <script>
 const $=s=>document.querySelector(s),root=document.documentElement,RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 $('#yr').textContent=new Date().getFullYear();
 // accent themes
-const T=[['crimson','Crimson','#e0262f'],['tide','Tide','#2fa3d6'],['ember','Ember','#f2801f'],['violet','Violet','#8b6cf6'],['jade','Jade','#38b27a'],['gold','Gold','#e8b524']];
+const T=[['crimson','Crimson','#eb3b43'],['tide','Tide','#2fa3d6'],['ember','Ember','#f2801f'],['violet','Violet','#8b6cf6'],['jade','Jade','#38b27a'],['gold','Gold','#e8b524']];
 const dock=$('#dock');
 T.forEach(([id,n,c])=>{const b=document.createElement('button');b.dataset.t=id;b.title=n;b.setAttribute('aria-label',n+' accent');b.style.setProperty('--c',c);b.innerHTML='<i></i>';b.onclick=()=>setT(id);dock.append(b)});
 function setT(id){root.dataset.t=id;dock.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.t===id));try{localStorage.setItem('accent',id)}catch(e){}}
@@ -520,9 +550,11 @@ const cmds=[
  {n:'Open GitHub',k:'Link',f:()=>open('https://github.com/hemuush','_blank')},
  ...T.map(([id,n])=>({n:'Accent: '+n,k:'Theme',f:()=>setT(id)}))];
 const ck=$('#cmdk'),ci=$('#cmdIn'),cl=$('#cmdList');let sel=0,shown=cmds;
-const render=()=>{const q=ci.value.toLowerCase();shown=cmds.filter(c=>c.n.toLowerCase().includes(q));sel=Math.min(sel,Math.max(shown.length-1,0));
- cl.innerHTML=shown.map((c,i)=>`<li class="${i===sel?'sel':''}" data-i="${i}">${c.n}<em>${c.k}</em></li>`).join('')||'<li>No matches</li>'};
-const openCmd=o=>{ck.classList.toggle('open',o);if(o){ci.value='';sel=0;render();setTimeout(()=>ci.focus(),50)}};
+const render=()=>{const q=ci.value.toLowerCase();shown=cmds.filter(c=>c.hidden?q.length>3&&c.n.startsWith(q):c.n.toLowerCase().includes(q));sel=Math.min(sel,Math.max(shown.length-1,0));
+ cl.innerHTML=shown.map((c,i)=>`<li id="cmd-${i}" role="option" aria-selected="${i===sel}" class="${i===sel?'sel':''}" data-i="${i}">${c.n}<em>${c.k}</em></li>`).join('')||'<li role="option" aria-disabled="true">No matches</li>';
+ ci.setAttribute('aria-activedescendant',shown.length?'cmd-'+sel:'');$('#cmdCount').textContent=shown.length+' results'};
+let cmdOpener=null;
+const openCmd=o=>{ck.classList.toggle('open',o);if(o){cmdOpener=document.activeElement;ci.value='';sel=0;render();setTimeout(()=>ci.focus(),50)}else if(cmdOpener&&cmdOpener.focus){cmdOpener.focus();cmdOpener=null}};
 const run=i=>{const c=shown[i];if(c){openCmd(false);c.f()}};
 addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openCmd(!ck.classList.contains('open'))}
  else if(e.key==='Escape'){openCmd(false);setAI(false)}});
@@ -573,6 +605,20 @@ if(!RM&&matchMedia('(pointer:fine)').matches){const c=$('#cur'),d=$('#curdot');l
  (function loop(){cx+=(mx-cx)*.18;cy+=(my-cy)*.18;c.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;requestAnimationFrame(loop)})();
  document.querySelectorAll('.cbtn i,.form button,.ai-fab,.kbd').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();
   b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')})}
+
+// ===== research-driven polish =====
+$('#heroAI').onclick=()=>setAI(true);
+// scramble: keep real text for screen readers
+document.querySelectorAll('.shd h2').forEach(h=>h.setAttribute('aria-label',h.textContent));
+// chat: announce only the finished answer
+(()=>{const st=$('#aiStatus');new MutationObserver(()=>{const last=[...aiLog.querySelectorAll('.msg.b')].pop();if(last&&last.querySelector('.src'))st.textContent=last.firstChild.textContent}).observe(aiLog,{childList:true,subtree:true})})();
+// command palette extras: shortcuts help, easter egg, ? key, focus trap
+cmds.push({n:'Keyboard shortcuts: ⌘K palette · ? help · Esc close',k:'Help',f:()=>{}},{n:'sudo hire hemant',k:'???',hidden:true,f:()=>{const t=$('#toast');t.textContent='Permission granted. Opening email…';t.classList.add('show');setTimeout(()=>{t.classList.remove('show');t.textContent='Email copied';location.href='mailto:hemant.shrma.3004@gmail.com?subject=Let%27s%20work%20together'},1400)}});
+addEventListener('keydown',e=>{if(e.key==='?'&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)){e.preventDefault();openCmd(true);setTimeout(()=>{ci.value='shortcut';render()},60)}});
+ck.addEventListener('keydown',e=>{if(e.key==='Tab'){e.preventDefault();ci.focus()}});
+addEventListener('beforeprint',()=>{document.querySelectorAll('.shd h2[aria-label]').forEach(h=>h.textContent=h.getAttribute('aria-label'));document.querySelectorAll('.rv').forEach(x=>x.classList.add('in'));document.querySelectorAll('.n[data-to]').forEach(n=>n.textContent=n.dataset.to+n.dataset.suf)});
+// back to top after two viewports
+(()=>{const b=$('#totop');addEventListener('scroll',()=>b.classList.toggle('show',scrollY>innerHeight*2),{passive:true})})();
 </script>
 </body>
 </html>
