@@ -7,6 +7,14 @@
 <meta name="description" content="Hemant Sharma: GenAI and Agentic AI engineer building production RAG, multi-agent and MCP systems on Azure.">
 <meta property="og:title" content="Hemant Sharma · GenAI & Agentic AI Engineer">
 <meta property="og:description" content="Production GenAI systems on Azure: RAG pipelines, multi-agent workflows and MCP integrations.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hemuush.github.io/hemuush/">
+<meta property="og:image" content="https://hemuush.github.io/hemuush/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hemuush.github.io/hemuush/og.png">
+<meta name="theme-color" content="#070707">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Allura&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
 <style>
@@ -179,6 +187,46 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
 @media(max-width:1300px){.vside{display:none}}
 @media(max-width:980px){.about{grid-template-columns:1fr;gap:28px}.toc{grid-template-columns:repeat(3,1fr)}.toc a:nth-child(3){border-right:0}.toc a:nth-child(4){padding-left:0}}
 @media(max-width:680px){.toc{grid-template-columns:1fr 1fr}.toc a{border-right:0!important;padding-left:0}.toc .tn{font-size:34px}.form .row{grid-template-columns:1fr}}
+/* ask my ai */
+.ai-fab{position:fixed;left:20px;bottom:20px;z-index:45;display:flex;align-items:center;gap:10px;padding:11px 16px 11px 12px;background:var(--ac);color:#fff;border:0;cursor:pointer;font:600 12px Inter,sans-serif;letter-spacing:1.2px;text-transform:uppercase;box-shadow:0 14px 34px -12px var(--ac);transition:transform .3s var(--ease)}
+.ai-fab:hover{transform:translateY(-3px)}
+.ai-fab .dot{width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.6s infinite}
+.ai{position:fixed;left:20px;bottom:76px;z-index:46;width:min(400px,calc(100vw - 40px));height:min(540px,calc(100vh - 110px));display:flex;flex-direction:column;background:var(--bg2);border:1px solid var(--line);box-shadow:0 30px 70px -20px #000;opacity:0;transform:translateY(14px) scale(.98);pointer-events:none;transition:.35s var(--ease)}
+.ai.open{opacity:1;transform:none;pointer-events:auto}
+.ai header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+.ai header b{font:400 18px Anton,sans-serif;letter-spacing:.5px;text-transform:uppercase}
+.ai header small{display:block;font-size:11px;color:var(--mut)}
+.ai header button{background:none;border:1px solid var(--line);color:var(--mut);width:30px;height:30px;cursor:pointer;font-size:16px}
+.ai .log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth}
+.msg{max-width:88%;padding:10px 13px;font-size:14px;line-height:1.55;white-space:pre-wrap}
+.msg.u{align-self:flex-end;background:var(--ac);color:#fff}
+.msg.b{align-self:flex-start;background:var(--bg3);border:1px solid var(--line)}
+.msg .src{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.msg .src span{font:500 9.5px "JetBrains Mono",monospace;letter-spacing:.5px;padding:2px 6px;border:1px solid var(--line);color:var(--mut);text-transform:uppercase}
+.msg .src span:first-child{border-color:var(--ac);color:var(--ac)}
+.typing{display:inline-flex;gap:4px}.typing i{width:5px;height:5px;border-radius:50%;background:var(--mut);animation:bounce 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes bounce{50%{transform:translateY(-4px);opacity:.4}}
+.sugg{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 12px}
+.sugg button{background:none;border:1px solid var(--line);color:var(--tx);padding:6px 10px;font:500 12px Inter,sans-serif;cursor:pointer;transition:border-color .2s,color .2s}
+.sugg button:hover{border-color:var(--ac);color:var(--ac)}
+.ai form{display:flex;border-top:1px solid var(--line)}
+.ai input{flex:1;background:transparent;border:0;color:var(--tx);font:14px Inter,sans-serif;padding:14px 16px;outline:none}
+.ai form button{background:var(--ac);color:#fff;border:0;padding:0 18px;cursor:pointer;font:600 12px Inter,sans-serif;letter-spacing:1px;text-transform:uppercase}
+.ai .note{font-size:10.5px;color:var(--mut);padding:0 16px 10px;letter-spacing:.3px}
+/* command palette */
+.kbd{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);padding:5px 9px;font:500 11px "JetBrains Mono",monospace;color:var(--mut);background:none;cursor:pointer;transition:border-color .2s,color .2s}
+.kbd:hover{border-color:var(--ac);color:var(--tx)}
+.cmdk{position:fixed;inset:0;z-index:70;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);display:grid;place-items:start center;padding-top:14vh;opacity:0;pointer-events:none;transition:opacity .25s}
+.cmdk.open{opacity:1;pointer-events:auto}
+.cmdk .box{width:min(560px,calc(100vw - 32px));background:var(--bg2);border:1px solid var(--line);box-shadow:0 40px 80px -20px #000;transform:translateY(-10px) scale(.98);transition:transform .3s var(--ease)}
+.cmdk.open .box{transform:none}
+.cmdk input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--tx);font:16px Inter,sans-serif;padding:18px 20px;outline:none}
+.cmdk ul{list-style:none;padding:8px;margin:0;max-height:340px;overflow-y:auto}
+.cmdk li{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;cursor:pointer;font-size:14px;color:var(--mut)}
+.cmdk li em{font:500 10px "JetBrains Mono",monospace;font-style:normal;text-transform:uppercase;letter-spacing:1px;color:var(--mut)}
+.cmdk li.sel{background:var(--bg3);color:var(--tx);box-shadow:inset 2px 0 0 var(--ac)}
+.cmdk .ft{display:flex;gap:16px;padding:10px 20px;border-top:1px solid var(--line);font:11px "JetBrains Mono",monospace;color:var(--mut)}
+@media(max-width:680px){.ai-fab span{display:none}.ai-fab{padding:12px}.kbd{display:none}}
 /* dock */
 .dock{position:fixed;right:20px;bottom:20px;z-index:40;display:flex;gap:4px;padding:6px;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px)}
 .dock button{width:30px;height:30px;border:0;background:transparent;cursor:pointer;display:grid;place-items:center;transition:transform .3s var(--ease)}
@@ -199,7 +247,7 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
   <header class="topbar cap">
     <div class="l"><b>GenAI Engineer</b><span>Agentic AI · Python</span></div>
     <nav><a href="#about">About</a><a href="#work">What I do</a><a href="#stack">Stack</a><a href="#skills">Process</a><a href="#contact">Contact</a></nav>
-    <div class="r">Open to collaborations <i class="star"></i></div>
+    <div class="r"><button class="kbd" id="cmdBtn" type="button">⌘K</button>Open to collaborations <i class="star"></i></div>
   </header>
 
   <div class="hero" id="top">
@@ -340,6 +388,19 @@ async def chat(req):
 </div>
 <div class="vside" aria-hidden="true"><b>Hemant Sharma</b> — Portfolio © 2026</div>
 <div class="dock" id="dock" role="group" aria-label="Accent colour"></div>
+<button class="ai-fab" id="aiFab" aria-expanded="false" aria-controls="ai"><i class="dot"></i><span>Ask my AI</span></button>
+<section class="ai" id="ai" aria-label="Ask my AI assistant" style="padding:0;border-bottom:1px solid var(--line)">
+  <header><div><b>Ask my AI</b><small>Retrieval over my profile · runs in your browser</small></div><button id="aiClose" aria-label="Close">×</button></header>
+  <div class="log" id="aiLog" aria-live="polite"></div>
+  <div class="sugg" id="aiSugg"></div>
+  <div class="note">A tiny retrieval demo: it finds the best-matching facts and cites the section. No external API.</div>
+  <form id="aiForm"><input id="aiIn" placeholder="Ask about skills, experience, RAG…" autocomplete="off" aria-label="Your question"><button>Ask</button></form>
+</section>
+<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Command palette"><div class="box">
+  <input id="cmdIn" placeholder="Type a command or search…" autocomplete="off" aria-label="Command">
+  <ul id="cmdList"></ul>
+  <div class="ft"><span>↑↓ navigate</span><span>↵ select</span><span>esc close</span></div>
+</div></div>
 <div class="toast" id="toast">Email copied</div>
 
 <script>
@@ -379,6 +440,69 @@ $('#cform').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);
  location.href=`mailto:hemant.shrma.3004@gmail.com?subject=${encodeURIComponent(f.get('subject')||'Hello from your portfolio')}&body=${encodeURIComponent(body)}`};
 // copy email
 $('#copy').onclick=async e=>{e.preventDefault();try{await navigator.clipboard.writeText('hemant.shrma.3004@gmail.com');const t=$('#toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600)}catch(err){location.href='mailto:hemant.shrma.3004@gmail.com'}};
+
+// ===== Ask my AI: tiny in-browser retrieval =====
+const KB=[
+ ['Profile','Hemant is a GenAI and Agentic AI engineer based in Noida, India, with 4+ years in backend engineering and about 2 years building production GenAI systems on Azure.','who are you about introduce yourself hemant background summary'],
+ ['Focus','He builds RAG pipelines, multi-agent workflows and MCP-based integrations, and cares about retrieval quality, evaluation, cost and reliability.','focus what do you do work speciality specialize'],
+ ['Experience','Currently Senior Executive at Walker Chandiok & Co LLP (Grant Thornton India) in Noida, since Dec 2024, building GenAI systems on Azure.','current job role company work now grant thornton senior executive'],
+ ['Experience','Before that, Analyst at KPMG India in Noida from Jan 2022 to Nov 2024.','previous kpmg analyst past experience before earlier worked'],
+ ['Impact','He reduced speech-model hosting cost by about 70% by re-architecting training and inference.','cost reduction impact saving achievement result hosting 70'],
+ ['Agentic AI','For agents he uses LangGraph and LangChain for multi-agent orchestration, and exposes internal APIs to agents as tools through custom MCP servers.','agent agents agentic langgraph langchain multi orchestration mcp tools'],
+ ['RAG','His RAG pipelines use semantic chunking and embedding search on Azure AI Search and ChromaDB, with grounded answers.','rag retrieval search vector embeddings chunking chromadb azure ai search'],
+ ['MCP','He builds custom MCP (Model Context Protocol) servers that expose internal APIs as agent tools.','mcp model context protocol server tools'],
+ ['Cloud','On Azure he works with Azure AI Foundry, Azure OpenAI, Container Apps, App Services, Azure DevOps CI/CD, Application Insights and cost management.','azure cloud devops deploy deployment foundry container ci cd'],
+ ['Backend','His backend work is in Python with FastAPI and Django, plus data pipelines and automation.','backend api python fastapi django'],
+ ['Skills','LLM providers: OpenAI API, Anthropic API and Azure OpenAI. ML and data: PyTorch, Scikit-learn, Pandas, NumPy and OpenCV.','llm openai anthropic models ml machine learning pytorch pandas data science'],
+ ['Data','Data and storage: CosmosDB, Azure AI Search, ChromaDB, Azure Document Intelligence, Redis, MongoDB, MySQL and MS SQL.','database data storage cosmos redis mongo sql'],
+ ['Quality','He evaluates LLM outputs before shipping, practises prompt engineering, and tests with pytest. Playwright is in his toolkit too.','evaluation quality testing pytest prompt engineering playwright'],
+ ['Process','His process: Discover the workflow, Design retrieval and agent graph with evals defined up front, Build, Evaluate, then Deploy on Azure with monitoring.','process approach how work method steps'],
+ ['Education','B.Tech in Computer Science from Punjabi University; Machine Learning (Stanford, Coursera); Python for Everybody (Coursera); 5-star Python on HackerRank.','education degree study university course certification'],
+ ['Contact','Email hemant.shrma.3004@gmail.com, or connect on LinkedIn at linkedin.com/in/hemuush. He is open to collaborations on GenAI, agents and backend systems.','contact email hire reach linkedin collaborate available freelance']];
+const tok=t=>t.toLowerCase().replace(/[^a-z0-9 ]/g,' ').split(/\s+/).filter(w=>w.length>1&&!['the','and','for','you','your','what','does','are','his','with','how','is','do','in','on','of','to','a','he','him','me','about','can','tell'].includes(w));
+const docs=KB.map(([sec,txt,kw])=>({sec,txt,toks:tok(txt+' '+kw+' '+kw+' '+kw)}));
+const df={};docs.forEach(d=>new Set(d.toks).forEach(w=>df[w]=(df[w]||0)+1));
+const score=(q,d)=>q.reduce((s,w)=>{const tf=d.toks.filter(x=>x===w||(w.length>3&&x.startsWith(w.slice(0,4)))).length;return s+(tf?(1+Math.log(tf))*Math.log(1+docs.length/(df[w]||1)):0)},0);
+function answer(q){const qt=tok(q);if(!qt.length)return null;
+ const r=docs.map(d=>({d,s:score(qt,d)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s);
+ if(!r.length)return null;const top=r.slice(0,r[1]&&r[1].s>r[0].s*.85?2:1);
+ return{text:top.map(x=>x.d.txt).join(' '),src:[...new Set(top.map(x=>x.d.sec))],score:r[0].s}}
+const aiLog=$('#aiLog'),ai=$('#ai'),fab=$('#aiFab');
+const addMsg=(cls,html)=>{const m=document.createElement('div');m.className='msg '+cls;m.innerHTML=html;aiLog.append(m);aiLog.scrollTop=aiLog.scrollHeight;return m};
+const esc=t=>t.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+let busy=false;
+function ask(q){if(busy||!q.trim())return;busy=true;addMsg('u',esc(q));
+ const m=addMsg('b','<span class="typing"><i></i><i></i><i></i></span>');
+ const a=answer(q);
+ const text=a?a.text:"I don't have that in my profile yet. Try asking about skills, experience, RAG, agents, Azure or how to get in touch.";
+ setTimeout(()=>{m.textContent='';let i=0;const step=()=>{m.textContent=text.slice(0,i);i+=3;aiLog.scrollTop=aiLog.scrollHeight;
+  if(i<=text.length+2)setTimeout(step,RM?0:12);else{m.textContent=text;if(a)m.insertAdjacentHTML('beforeend','<div class="src">'+['retrieved',...a.src].map(s=>`<span>${s}</span>`).join('')+'</div>');busy=false}};step()},RM?0:500)}
+['What do you work on?','Experience?','How do you build RAG?','Agents & MCP?','Biggest impact?','How to contact?'].forEach(q=>{const b=document.createElement('button');b.type='button';b.textContent=q;b.onclick=()=>ask(q);$('#aiSugg').append(b)});
+const setAI=o=>{ai.classList.toggle('open',o);fab.setAttribute('aria-expanded',o);if(o){if(!aiLog.children.length)addMsg('b',"Hi! I'm a small retrieval assistant over Hemant's profile. Ask me anything about his work.");setTimeout(()=>$('#aiIn').focus(),200)}};
+fab.onclick=()=>setAI(!ai.classList.contains('open'));$('#aiClose').onclick=()=>setAI(false);
+$('#aiForm').onsubmit=e=>{e.preventDefault();const v=$('#aiIn').value;$('#aiIn').value='';ask(v)};
+
+// ===== Command palette =====
+const cmds=[
+ ...[['About','#about'],['What I do','#work'],['Tools I use','#stack'],['Process','#skills'],['Experience','#experience'],['Contact','#contact']].map(([n,h])=>({n:'Go to '+n,k:'Jump',f:()=>document.querySelector(h).scrollIntoView({behavior:'smooth'})})),
+ {n:'Ask my AI',k:'Open',f:()=>setAI(true)},
+ {n:'Copy email address',k:'Copy',f:()=>$('#copy').click()},
+ {n:'Send an email',k:'Mail',f:()=>location.href='mailto:hemant.shrma.3004@gmail.com'},
+ {n:'Open LinkedIn',k:'Link',f:()=>open('https://www.linkedin.com/in/hemuush/','_blank')},
+ {n:'Open GitHub',k:'Link',f:()=>open('https://github.com/hemuush','_blank')},
+ ...T.map(([id,n])=>({n:'Accent: '+n,k:'Theme',f:()=>setT(id)}))];
+const ck=$('#cmdk'),ci=$('#cmdIn'),cl=$('#cmdList');let sel=0,shown=cmds;
+const render=()=>{const q=ci.value.toLowerCase();shown=cmds.filter(c=>c.n.toLowerCase().includes(q));sel=Math.min(sel,Math.max(shown.length-1,0));
+ cl.innerHTML=shown.map((c,i)=>`<li class="${i===sel?'sel':''}" data-i="${i}">${c.n}<em>${c.k}</em></li>`).join('')||'<li>No matches</li>'};
+const openCmd=o=>{ck.classList.toggle('open',o);if(o){ci.value='';sel=0;render();setTimeout(()=>ci.focus(),50)}};
+const run=i=>{const c=shown[i];if(c){openCmd(false);c.f()}};
+addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openCmd(!ck.classList.contains('open'))}
+ else if(e.key==='Escape'){openCmd(false);setAI(false)}});
+ci.addEventListener('input',()=>{sel=0;render()});
+ci.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){sel=(sel+1)%shown.length;render();e.preventDefault()}else if(e.key==='ArrowUp'){sel=(sel-1+shown.length)%shown.length;render();e.preventDefault()}else if(e.key==='Enter')run(sel)});
+cl.onclick=e=>{const li=e.target.closest('li[data-i]');if(li)run(+li.dataset.i)};
+ck.onclick=e=>{if(e.target===ck)openCmd(false)};
+$('#cmdBtn').onclick=()=>openCmd(true);
 </script>
 </body>
 </html>
