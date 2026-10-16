@@ -227,6 +227,29 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
 .cmdk li.sel{background:var(--bg3);color:var(--tx);box-shadow:inset 2px 0 0 var(--ac)}
 .cmdk .ft{display:flex;gap:16px;padding:10px 20px;border-top:1px solid var(--line);font:11px "JetBrains Mono",monospace;color:var(--mut)}
 @media(max-width:680px){.ai-fab span{display:none}.ai-fab{padding:12px}.kbd{display:none}}
+/* interactive extras */
+.orb .nd{cursor:pointer;outline:none}
+.orb .hit{fill:transparent}
+.orb .nd .node{transition:r .35s cubic-bezier(.22,.8,.2,1),filter .35s}
+.orb .nd .lbl{transition:fill .3s}
+.orb .nd.on .node{r:9;filter:drop-shadow(0 0 8px var(--ac))}
+.orb .nd.on .lbl,.orb .nd:hover .lbl,.orb .nd:focus-visible .lbl{fill:var(--tx)}
+.orb .edge.on{opacity:1;stroke-width:1.6}
+#pulse{filter:drop-shadow(0 0 6px var(--ac));fill:var(--tx)}
+.acap{position:absolute;left:50%;bottom:-58px;transform:translateX(-50%);width:260px;text-align:center}
+.acap b{display:block;font:500 11px "JetBrains Mono",monospace;letter-spacing:1.5px;text-transform:uppercase;color:var(--ac)}
+.acap span{display:block;font-size:13px;color:var(--mut);min-height:2.6em;transition:opacity .3s}
+.proc .fill{position:absolute;left:76px;top:24px;width:2px;height:calc(100% - 48px);background:var(--ac);transform-origin:top;transform:scaleY(0);box-shadow:0 0 12px var(--ac);margin-left:-.5px}
+.step .ic,.step b{transition:background .4s,transform .4s cubic-bezier(.22,.8,.2,1),color .4s}
+.step:not(.lit) b{color:var(--mut)}
+.step.lit .ic{background:var(--ac);transform:scale(1.06)}
+.svc{transform-style:preserve-3d;will-change:transform}
+.svc .top .k{transform:translateZ(30px)}
+.cur{position:fixed;left:0;top:0;width:34px;height:34px;border:1px solid var(--ac);border-radius:50%;pointer-events:none;z-index:90;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s,opacity .25s;opacity:0;mix-blend-mode:difference}
+.cur.on{opacity:.9}.cur.hov{width:58px;height:58px;background:color-mix(in srgb,var(--ac) 25%,transparent)}
+.curdot{position:fixed;left:0;top:0;width:5px;height:5px;border-radius:50%;background:var(--ac);pointer-events:none;z-index:91;transform:translate(-50%,-50%);opacity:0}
+.curdot.on{opacity:1}
+@media(pointer:coarse){.cur,.curdot{display:none}}
 /* dock */
 .dock{position:fixed;right:20px;bottom:20px;z-index:40;display:flex;gap:4px;padding:6px;border:1px solid var(--line);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px)}
 .dock button{width:30px;height:30px;border:0;background:transparent;cursor:pointer;display:grid;place-items:center;transition:transform .3s var(--ease)}
@@ -261,14 +284,18 @@ footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;paddin
         <div class="loc cap"><i></i>Based in Noida, India</div>
       </div>
       <div class="visual">
-        <div class="orb" aria-hidden="true">
-          <svg viewBox="0 0 300 300">
+        <div class="orb" id="orb">
+          <svg viewBox="0 0 300 300" role="group" aria-label="Agent loop diagram. Select a step.">
             <circle class="r1" cx="150" cy="150" r="140"/><circle class="r2" cx="150" cy="150" r="118"/>
-            <g><line class="edge" x1="150" y1="150" x2="62" y2="78"/><line class="edge" x1="150" y1="150" x2="248" y2="96"/><line class="edge" x1="150" y1="150" x2="70" y2="226"/><line class="edge" x1="150" y1="150" x2="236" y2="214"/></g>
-            <circle class="node" cx="62" cy="78" r="5"/><circle class="node" cx="248" cy="96" r="5"/><circle class="node" cx="70" cy="226" r="5"/><circle class="node" cx="236" cy="214" r="5"/>
-            <text class="lbl" x="34" y="64">RETRIEVE</text><text class="lbl" x="226" y="82">PLAN</text><text class="lbl" x="44" y="246">TOOLS · MCP</text><text class="lbl" x="214" y="236">EVALUATE</text>
+            <g><line class="edge" id="e0" x1="150" y1="150" x2="248" y2="96"/><line class="edge" id="e1" x1="150" y1="150" x2="62" y2="78"/><line class="edge" id="e2" x1="150" y1="150" x2="70" y2="226"/><line class="edge" id="e3" x1="150" y1="150" x2="236" y2="214"/></g>
+            <g class="nd" data-i="0" tabindex="0" role="button" aria-label="Plan"><circle class="hit" cx="248" cy="96" r="22"/><circle class="node" cx="248" cy="96" r="5"/><text class="lbl" x="226" y="82">PLAN</text></g>
+            <g class="nd" data-i="1" tabindex="0" role="button" aria-label="Retrieve"><circle class="hit" cx="62" cy="78" r="22"/><circle class="node" cx="62" cy="78" r="5"/><text class="lbl" x="34" y="64">RETRIEVE</text></g>
+            <g class="nd" data-i="2" tabindex="0" role="button" aria-label="Tools via MCP"><circle class="hit" cx="70" cy="226" r="22"/><circle class="node" cx="70" cy="226" r="5"/><text class="lbl" x="44" y="246">TOOLS · MCP</text></g>
+            <g class="nd" data-i="3" tabindex="0" role="button" aria-label="Evaluate"><circle class="hit" cx="236" cy="214" r="22"/><circle class="node" cx="236" cy="214" r="5"/><text class="lbl" x="214" y="236">EVALUATE</text></g>
+            <circle id="pulse" r="4.5" cx="150" cy="150" fill="#fff"/>
             <circle class="core" cx="150" cy="150" r="46"/><text x="150" y="161" text-anchor="middle">HS</text>
           </svg>
+          <div class="acap" id="acap" aria-live="polite"><b id="astep">01 · Plan</b><span id="atext">Break the request into steps.</span></div>
         </div>
         <img src="photo.png" alt="Hemant Sharma" onerror="this.remove()">
       </div>
@@ -342,7 +369,7 @@ async def chat(req):
     </div>
     <div class="rv" style="--i:1">
       <h3 class="d">Work process</h3>
-      <div class="proc">
+      <div class="proc"><span class="fill" id="pfill"></span>
         <div class="step"><span class="no">01</span><span class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span><div><b>Discover</b><span>Understand the workflow, the users and what "good" looks like.</span></div></div>
         <div class="step"><span class="no">02</span><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h6"/></svg></span><div><b>Design</b><span>Pick retrieval, agent graph and tools; define evals up front.</span></div></div>
         <div class="step"><span class="no">03</span><span class="ic"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span><div><b>Build</b><span>FastAPI services, LangGraph agents, MCP servers and pipelines.</span></div></div>
@@ -401,6 +428,7 @@ async def chat(req):
   <ul id="cmdList"></ul>
   <div class="ft"><span>↑↓ navigate</span><span>↵ select</span><span>esc close</span></div>
 </div></div>
+<div class="cur" id="cur"></div><div class="curdot" id="curdot"></div>
 <div class="toast" id="toast">Email copied</div>
 
 <script>
@@ -503,6 +531,48 @@ ci.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){sel=(sel+1)%shown.leng
 cl.onclick=e=>{const li=e.target.closest('li[data-i]');if(li)run(+li.dataset.i)};
 ck.onclick=e=>{if(e.target===ck)openCmd(false)};
 $('#cmdBtn').onclick=()=>openCmd(true);
+
+// ===== Live agent loop in hero =====
+(()=>{const steps=[['Plan','Break the request into steps and pick tools.'],['Retrieve','Search the knowledge base for grounded context.'],['Tools · MCP','Call internal APIs through MCP servers.'],['Evaluate','Check quality and relevance before answering.']];
+ const nds=[...document.querySelectorAll('.orb .nd')],eds=[0,1,2,3].map(i=>$('#e'+i)),pulse=$('#pulse');
+ let cur=0,t0=performance.now(),DUR=2200,hovering=false;
+ const pts=eds.map(e=>[+e.getAttribute('x2'),+e.getAttribute('y2')]);
+ const show=i=>{cur=i;t0=performance.now();nds.forEach((n,k)=>n.classList.toggle('on',k===i));eds.forEach((e,k)=>e.classList.toggle('on',k===i));
+  $('#astep').textContent=`0${i+1} · ${steps[i][0]}`;$('#atext').textContent=steps[i][1]};
+ nds.forEach((n,i)=>{n.onclick=()=>show(i);n.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show(i)}};
+  n.onmouseenter=()=>hovering=true;n.onmouseleave=()=>hovering=false});
+ show(0);if(RM)return;
+ (function tick(now){let p=(now-t0)/DUR;if(p>=1){if(!hovering)show((cur+1)%4);else t0=now;p=0}
+  const k=p<.5?p*2:2-p*2,e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2,[x,y]=pts[cur];
+  pulse.setAttribute('cx',150+(x-150)*e);pulse.setAttribute('cy',150+(y-150)*e);requestAnimationFrame(tick)})(performance.now())})();
+
+// ===== Process line fills with scroll =====
+(()=>{const proc=document.querySelector('.proc'),fill=$('#pfill'),st=[...proc.querySelectorAll('.step')];
+ const upd=()=>{const r=proc.getBoundingClientRect(),vh=innerHeight;const p=Math.max(0,Math.min(1,(vh*.7-r.top)/r.height));
+  fill.style.transform=`scaleY(${p})`;st.forEach(s=>{const sr=s.getBoundingClientRect();s.classList.toggle('lit',sr.top+24<r.top+p*r.height+24)})};
+ addEventListener('scroll',upd,{passive:true});upd()})();
+
+// ===== 3D tilt on cards =====
+if(!RM&&matchMedia('(pointer:fine)').matches)document.querySelectorAll('.svc').forEach(c=>{
+ c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+  c.style.transition='border-color .35s';c.style.transform=`perspective(900px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-4px)`});
+ c.addEventListener('pointerleave',()=>{c.style.transition='transform .6s cubic-bezier(.22,.8,.2,1),border-color .35s';c.style.transform=''})});
+
+// ===== Scramble section headings =====
+(()=>{const CH='ABCDEFGHIJKLMNOPQRSTUVWXYZ#%&*01';
+ const scr=el=>{const final=el.textContent;let f=0;const n=final.length;
+  const step=()=>{el.textContent=[...final].map((c,i)=>c===' '?' ':i<f/2?c:CH[Math.random()*CH.length|0]).join('');if(f<n*2){f++;requestAnimationFrame(step)}else el.textContent=final};step()};
+ if(RM)return;const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){scr(e.target);o.unobserve(e.target)}}),{threshold:.6});
+ document.querySelectorAll('.shd h2').forEach(h=>o.observe(h))})();
+
+// ===== Cursor ring + magnetic buttons =====
+if(!RM&&matchMedia('(pointer:fine)').matches){const c=$('#cur'),d=$('#curdot');let mx=0,my=0,cx=0,cy=0;
+ addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;d.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`;c.classList.add('on');d.classList.add('on');
+  c.classList.toggle('hov',!!e.target.closest('a,button,.tool,.svc,.nd,input,textarea'))});
+ document.addEventListener('pointerleave',()=>{c.classList.remove('on');d.classList.remove('on')});
+ (function loop(){cx+=(mx-cx)*.18;cy+=(my-cy)*.18;c.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;requestAnimationFrame(loop)})();
+ document.querySelectorAll('.cbtn i,.form button,.ai-fab,.kbd').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();
+  b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')})}
 </script>
 </body>
 </html>
